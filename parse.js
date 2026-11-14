@@ -3,7 +3,7 @@ const https = require("https");
 
 const BASE_URL = "https://www.jagobd.com";
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
-const REFERER = "https://www.jagobd.com/";
+const REFERER = "https://tvz.jagobd.com";
 
 const categories = [
   "all", "bangla", "sports", "kolkata", "indian", "news", 
