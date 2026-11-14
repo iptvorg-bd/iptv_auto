@@ -1,37 +1,38 @@
-name: Update M3U Playlist
+name: Ayna OTT Playlist Generator
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    # প্রতিদিন রাত ১২:০০ টায় (UTC) একবার স্বয়ংক্রিয়ভাবে চলবে (২৪ ঘণ্টায় একবার)
-    - cron: '0 0 * * *'
-  workflow_dispatch: # এটি যুক্ত করায় আপনি Actions ট্যাব থেকে ম্যানুয়ালি রান করতে পারবেন
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-playlist:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # ফাইলে পরিবর্তন পুশ করার অনুমতি
+      contents: write
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.x'
+          node-version: '18'
 
       - name: Install Dependencies
-        run: |
-          pip install requests
+        run: npm install puppeteer
 
-      - name: Process and Generate Playlist
-        run: |
-          python process.py
+      - name: Run Scraper Script
+        run: node parse.js
 
-      - name: Commit and Push Changes
+      - name: Commit and Push Files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add output.m3u
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update playlist [skip ci]" && git push)
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add ayna_ott.json ayna_ott.m3u
+          git diff --staged --quiet || git commit -m "Auto updated Ayna OTT playlist: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
