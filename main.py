@@ -140,6 +140,7 @@ def fetch_channels_by_group():
         ("https://iptv-org.github.io/iptv/categories/religious.m3u", "religious"),
         ("https://iptv-org.github.io/iptv/categories/movies.m3u", "movies"),
         ("https://iptv-org.github.io/iptv/categories/animation.m3u", "animation"),
+        ("https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u", "custom"),
         ("https://iptv-org.github.io/iptv/categories/documentary.m3u", "documentary")
     ]
     
