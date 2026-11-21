@@ -114,7 +114,7 @@ def categorize_and_prioritize(channel):
         return (8, 0, "Documentary & Info")
 
     # ৯. Music Channels
-    music_keywords = ['mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla']
+    music_keywords = ['epic', 'mtv', '9xm', 'zoom', 'music box', '9x', 'b4u music', 'sangeet bangla']
     if any(k in norm_name for k in music_keywords):
         return (9, 0, "Music Channels")
 
