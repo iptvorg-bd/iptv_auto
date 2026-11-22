@@ -94,12 +94,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
         },
         {
-            "name": "NAN TV",
-            "logo": "https://www.jagobd.com/wp-content/uploads/2019/11/NAN-TV-Logo-02.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8"
-        },
-        {
             "name": "National Geographic  HD",
             "logo": "https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540",
             "group": "Bangladeshi TV",
@@ -418,12 +412,6 @@
             "stream_url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8"
         },
         {
-            "name": "Gugbang TV",
-            "logo": "https://i.imgur.com/f1tz5fg.png",
-            "group": "Sports Channels",
-            "stream_url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
-        },
-        {
             "name": "HGTV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/hgtv.png",
             "group": "Sports Channels",
@@ -731,15 +719,15 @@
         },
         {
             "name": "Quran TV",
-            "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
-            "group": "Islamic TV",
-            "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
-        },
-        {
-            "name": "Quran TV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/quran_tv.jpg",
             "group": "Islamic TV",
             "stream_url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8"
+        },
+        {
+            "name": "Quran TV",
+            "logo": "https://upload.wikimedia.org/wikipedia/fa/d/df/Quarntvlogo.png",
+            "group": "Islamic TV",
+            "stream_url": "https://ncdn.telewebion.ir/quran/live/playlist.m3u8"
         },
         {
             "name": "Sunnah TV",
@@ -1225,13 +1213,13 @@
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
+            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
         },
         {
             "name": "Cartoon Network",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
             "group": "Kids Channels",
-            "stream_url": "https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8"
+            "stream_url": "http://176.65.153.40:6002/play/a013/index.m3u8"
         },
         {
             "name": "Cartoon Network",
@@ -1492,16 +1480,28 @@
             "stream_url": "https://live.x2.co.th/live/bntv.m3u8"
         },
         {
-            "name": "CEACOM TV",
-            "logo": "https://i.imgur.com/hutdRfk.png",
-            "group": "Music Channels",
-            "stream_url": "https://eu1.servers10.com:8081/ceacom/index.m3u8"
-        },
-        {
             "name": "Dare To Dream Network",
             "logo": "https://i.imgur.com/oNUpXA9.png",
             "group": "Music Channels",
             "stream_url": "https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8"
+        },
+        {
+            "name": "Dream TV",
+            "logo": "https://i.imgur.com/XRUDhqQ.png",
+            "group": "Music Channels",
+            "stream_url": "https://streamfi-dreamtv1.zettawiseroutes.com:8181/hls/stream.m3u8"
+        },
+        {
+            "name": "EN | MTV Biggest Pop",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/en_mtv_biggest_pop_usa.png",
+            "group": "Music Channels",
+            "stream_url": "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d14fd1a252d35decbc4080clivestitch/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a02e7-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=db3aa987-9f35-4664-b523-5fe34623b36c&profilesFromStream=true"
+        },
+        {
+            "name": "EN | MTV Yo!",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/b/b1/Yo%21_MTV_Raps_1987.svg",
+            "group": "Music Channels",
+            "stream_url": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f1aadf373bed3000794d1d7/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5f1aadf373bed3000794d1d7&deviceLat=41.1167&deviceLon=1.2500&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=ES&serverSideAds=false&sid=300&terminate=false&userId="
         }
     ]
 }
