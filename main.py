@@ -47,7 +47,7 @@ EXCLUDED_WORDS = [
 KEYWORD_CATEGORIES = [
     {
         "priority": 1,
-        "group": "Bangla TV",
+        "group": "Bangla",
         "keywords": [
             # বাংলাদেশের জাতীয়, নিউজ, বিনোদন ও সব চ্যানেল
             'btv', 'bangladesh television', 'btv world', 'btv chattogram', 'btv news',
@@ -71,7 +71,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 2,
-        "group": "Sports Channels",
+        "group": "Sports",
         "keywords": [
             # বাংলাদেশ, ইন্ডিয়া ও সাবকন্টিনেন্টের সব জনপ্রিয় স্পোর্টস চ্যানেল
             't sports', 'tsports', 'gazi tv', 'gtv',
@@ -104,7 +104,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 4,
-        "group": "Indian Movie Channels",
+        "group": "Hindi Movie",
         "keywords": [
             'star gold', 'sony max', 'sony wah', 'zee cinema', 'zee classic',
             'zee action', 'zee bollywood', 'zee anmol cinema', 'and pictures', '&pictures',
@@ -119,7 +119,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 5,
-        "group": "English Movie Channels",
+        "group": "English Movie",
         "keywords": [
             # ইন্ডিয়া ও এশিয়ার জনপ্রিয় ইংলিশ মুভি চ্যানেল
             'star movies', 'star movies select', 'sony pix', 'movies now', 'mnx',
@@ -128,7 +128,7 @@ KEYWORD_CATEGORIES = [
             # ইউএসএ, ইউকে ও ইন্টারন্যাশনাল জনপ্রিয় ইংলিশ মুভি চ্যানেল
             'hbo', 'cinemax', 'showtime', 'starz', 'paramount', 'paramount network',
             'sky cinema', 'sky movies', 'film4', 'amc', 'tcm', 'turner classic movies',
-            'mgm', 'tnt', 'tbs', 'fx', 'fxm', 'fx movies', 'syfy', 'hallmark',
+            'mgm', 'netplix', 'tbs', 'fx', 'fxm', 'fx movies', 'syfy', 'hallmark',
             'lifetime movies', 'ifc', 'sundance', 'sony movies', 'great movies',
             'movies4men', 'talking pictures', 'filmbox', 'studio universal', 'universal tv',
             'cinema world',
@@ -139,7 +139,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 6,
-        "group": "Indian Entertainment",
+        "group": "Hindi",
         "keywords": [
             'star plus', 'star bharat', 'star utsav', 'life ok',
             'sony tv', 'sony entertainment', 'sony set', 'set india', 'set hd', 'set asia',
@@ -154,7 +154,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 7,
-        "group": "Kids Channels",
+        "group": "Kids",
         "keywords": [
             'hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork',
             'sonic', 'nickelodeon', 'nick', 'disney'
@@ -172,7 +172,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 9,
-        "group": "Music Channels",
+        "group": "Music",
         "keywords": [
             '9xm', '9x jalwa', '9x tashan', '9x jhakaas', 'mastiii', 'masti tv',
             'zing', 'zoom', 'b4u music', 'mtv', 'mtv beats', 'mtv hits', 'mtv live',
