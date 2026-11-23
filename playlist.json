@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 295,
+    "total_channels": 268,
     "status": "success",
     "channels": [
         {
@@ -8,12 +8,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/ananda-tv.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/LeUAm4F1iixYns3s3Non/index.m3u8"
-        },
-        {
-            "name": "Ananda TV_132",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/ananda-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/anandatv.stream/index.m3u8"
         },
         {
             "name": "Ananda TV_133",
@@ -70,18 +64,6 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8"
         },
         {
-            "name": "ATN Bangla UK_145",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/atn-bangla-uk.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8"
-        },
-        {
-            "name": "ATN Bangla_141",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/atn-bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/atnbd-8-org.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "ATN Bangla_142",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/atn-bangla.png",
             "group": "Bangladeshi TV",
@@ -94,10 +76,10 @@
             "stream_url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8"
         },
         {
-            "name": "ATN News_146",
+            "name": "ATN News_147",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/atn-news-e0442addb4.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/atnws-sg.stream/tracks-v1a1/mono.m3u8"
+            "stream_url": "https://iptv-proxy.ahmed-bd-org.workers.dev/atn-news/index.m3u8"
         },
         {
             "name": "Bangla TV",
@@ -122,12 +104,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/banglavision.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen5.aynaott.com/tgUzpPc9r6xw/index.m3u8"
-        },
-        {
-            "name": "Bangla Vision_172",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/banglavision.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/banglav000.stream/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "Bangla Vision_173",
@@ -184,12 +160,6 @@
             "stream_url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/index.m3u8"
         },
         {
-            "name": "Boishakhi TV_185",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/boishakhi-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/boishakhitv-org.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "Boishakhi TV_186",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/boishakhi-tv.png",
             "group": "Bangladeshi TV",
@@ -226,12 +196,6 @@
             "stream_url": "https://tvsen6.aynaott.com/YrVDF8gujkdh/index.m3u8"
         },
         {
-            "name": "Channel 9",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-9.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen6.aynaott.com/kajlsd57jnzxyo/index.m3u8"
-        },
-        {
             "name": "Channel 9_11",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-9.png",
             "group": "Bangladeshi TV",
@@ -244,12 +208,6 @@
             "stream_url": "https://nkafmbewiff.gpcdn.net/tile_7/master.m3u8"
         },
         {
-            "name": "Channel 9_189",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-9.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel9hd.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "CHANNEL I",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/channel_i.png",
             "group": "Bangladeshi TV",
@@ -260,12 +218,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-i.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/FNHpYvGZ7FkCE10PwTHm/index.m3u8"
-        },
-        {
-            "name": "Channel I_193",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-i.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channeli-8-org.stream/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "Channel I_194",
@@ -281,9 +233,9 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.postimg.cc/nV38nLkH/20260913-092507.png",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-s.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://box.bbaria.net:8083/ChannelS/video.m3u8"
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8"
         },
         {
             "name": "Channel S UK",
@@ -292,10 +244,16 @@
             "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8"
         },
         {
-            "name": "Channel S_196",
+            "name": "Channel S UK_200",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-s-uk.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/chsukoff.stream/live-orgin/chsukoff.stream/chunks.m3u8"
+        },
+        {
+            "name": "Channel S_197",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-s.png",
             "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8"
+            "stream_url": "https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8"
         },
         {
             "name": "Channel S_198",
@@ -304,22 +262,16 @@
             "stream_url": "https://app.ncare.live/live-orgin/channels.stream/playlist.m3u8"
         },
         {
-            "name": "Channel S_199",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/channel-s.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://iptvlive.ahmed-bd-org.workers.dev/channel-s-1/index.m3u8"
-        },
-        {
             "name": "DBC News",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/dbc-news.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/pF66Tkz0qFwP2aMMqHyt/index.m3u8"
         },
         {
-            "name": "DBC News_15",
+            "name": "DBC News_218",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/dbc-news.png",
             "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/dbcnews.stream/tracks-v1a1/mono.m3u8"
+            "stream_url": "https://iptvlive.ahmed-bd-org.workers.dev/dbc-news-1/index.m3u8"
         },
         {
             "name": "Deen TV Bangla",
@@ -328,28 +280,22 @@
             "stream_url": "https://app.ncare.live/live-orgin/deentv.stream/playlist.m3u8"
         },
         {
+            "name": "Deepto TV",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/deepto-tv.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://tvsen5.aynaott.com/tK2BNdfsdfsdf/index.m3u8"
+        },
+        {
             "name": "Deepto TV_16",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/deepto-tv.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://byphdgllyk.gpcdn.net/hls/deeptotv/index.m3u8"
         },
         {
-            "name": "Desh Bangla TV",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/desh-bangla-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshbanglatv.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "DESH TV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/desh_tv.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/ryFkXfd1a4CQ7mMdc820/index.m3u8"
-        },
-        {
-            "name": "Desh TV_17",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/desh-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/deshtv.stream/index.m3u8"
         },
         {
             "name": "Duronto TV",
@@ -370,12 +316,6 @@
             "stream_url": "https://tvsen6.aynaott.com/fbgZV3X17hwWcyfZ4pdb/index.m3u8"
         },
         {
-            "name": "Ekhon TV_264",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/ekhon-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/globaltv.stream/index.m3u8"
-        },
-        {
             "name": "Ekushey TV",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/ekushey-tv-d9479035b4.png",
             "group": "Bangladeshi TV",
@@ -388,10 +328,10 @@
             "stream_url": "http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8"
         },
         {
-            "name": "Ekushey TV_266",
+            "name": "Ekushey TV_267",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/ekushey-tv-d9479035b4.png",
             "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ekusheytv-8-org.stream/index.m3u8"
+            "stream_url": "https://ekusheyserver.com/etvlivesn.m3u8"
         },
         {
             "name": "Ekushey TV_268",
@@ -406,22 +346,10 @@
             "stream_url": "https://tvsen6.aynaott.com/y0q9eFAuquAtvTxRzUHq/index.m3u8"
         },
         {
-            "name": "Global TV_296",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/global-tv-1080p-5ffc043912.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/playlist.m3u8"
-        },
-        {
             "name": "Green Gold TV",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/green-gold-tv.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8"
-        },
-        {
-            "name": "Independent TV",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/independent-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://tvsen6.aynaott.com/Wef2Vj67njeYGDqQNFB9/index.m3u8"
         },
         {
             "name": "Independent TV_21",
@@ -446,6 +374,12 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/jamuna-tv.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/KGdZEdA7qQ43dmPkgk1j/index.m3u8"
+        },
+        {
+            "name": "Jamuna TV_321",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/jamuna-tv.png",
+            "group": "Bangladeshi TV",
+            "stream_url": "https://iptv-proxy.ahmed-bd-org.workers.dev/jamuna-tv/index.m3u8"
         },
         {
             "name": "Jamuna TV_322",
@@ -610,12 +544,6 @@
             "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8"
         },
         {
-            "name": "Peace TV Bangla",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/peace-tv-bangla.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/peacetvban.stream/index.m3u8"
-        },
-        {
             "name": "Peace TV Bangla_392",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/peace-tv-bangla.png",
             "group": "Bangladeshi TV",
@@ -640,12 +568,6 @@
             "stream_url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8"
         },
         {
-            "name": "RTV_446",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/rtv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8"
-        },
-        {
             "name": "RTV_447",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/rtv.png",
             "group": "Bangladeshi TV",
@@ -656,18 +578,6 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sa_tv_hd.png",
             "group": "Bangladeshi TV",
             "stream_url": "https://tvsen6.aynaott.com/rELXiuUXqbgzPb06Npom/index.m3u8"
-        },
-        {
-            "name": "SA TV_30",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/sa-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/satvoff5666.stream/playlist.m3u8"
-        },
-        {
-            "name": "SA TV_453",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/sa-tv.png",
-            "group": "Bangladeshi TV",
-            "stream_url": "https://iptvlive.ahmed-bd-org.workers.dev/sa-tv-1/index.m3u8"
         },
         {
             "name": "SA TV_454",
@@ -844,10 +754,44 @@
             "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts"
         },
         {
+            "name": "Sony Ten 1",
+            "logo": "https://i.postimg.cc/cH2Cc7zX/20250529-122631.png",
+            "group": "Sports Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009276",
+            "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Sony Ten 2",
+            "logo": "https://i.postimg.cc/x12k7R1Z/20250529-122855.png",
+            "group": "Sports Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009277",
+            "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Sony Ten 3",
+            "logo": "https://i.postimg.cc/vH9g3jb9/20250529-123011.png",
+            "group": "Sports Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009278",
+            "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Sony Ten 5",
+            "logo": "https://i.postimg.cc/kMLRN93q/20250529-123147.png",
+            "group": "Sports Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009275",
+            "referer": "https://techandeat.online"
+        },
+        {
             "name": "Star Sports 1",
             "logo": "https://i.postimg.cc/N0sYHFDj/20251002-230032.png",
             "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/5.m3u8"
+        },
+        {
+            "name": "Star Sports SL 1",
+            "logo": "https://i.postimg.cc/50ykjF9d/20250702-032238.png",
+            "group": "Sports Channels",
+            "stream_url": "http://103.114.11.37:8081/Star-select-1/index.m3u8?token=scn"
         },
         {
             "name": "Star Sports SL 2",
@@ -904,12 +848,6 @@
             "stream_url": "https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8"
         },
         {
-            "name": "Al Sunnah Al Nabawiyah",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/sunnah-tv.png",
-            "group": "Islamic TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/madina.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "BAHRAIN QURAN",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/bahrain_quran.png",
             "group": "Islamic TV",
@@ -946,46 +884,16 @@
             "stream_url": "https://live-islamtv-bangla.simplestreamcdn.com/out/v1/islamchannel/islamtv-bangla/hls-ts/index.m3u8"
         },
         {
-            "name": "Islam Channel Bangla_316",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/islam-channel-bangla.png",
-            "group": "Islamic TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamchbangla.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
             "name": "Islam TV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/islam_tv.png",
             "group": "Islamic TV",
             "stream_url": "https://tvsen1.aynaott.com/bB3A5dyq/index.m3u8"
         },
         {
-            "name": "Islamic TV",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/islamic-tv.png",
-            "group": "Islamic TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamictvbd.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
-            "name": "Madani Channel",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/madani_channel_urdu.png",
-            "group": "Islamic TV",
-            "stream_url": "http://neorcqds.top:8080/4241763327415375/f206ced7f9fb/23649"
-        },
-        {
-            "name": "MADANI Channel Bangla",
-            "logo": "https://madanichannelbangla.tv/img/img/logo/b-logo.png",
-            "group": "Islamic TV",
-            "stream_url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8"
-        },
-        {
             "name": "Madani TV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/madani_tv.png",
             "group": "Islamic TV",
             "stream_url": "https://tvsen3.aynaott.com/z24qLsqV/index.m3u8"
-        },
-        {
-            "name": "Makkah Live",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/sunnah-tv.png",
-            "group": "Islamic TV",
-            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/index.m3u8"
         },
         {
             "name": "Makkah TV",
@@ -998,12 +906,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/makkah-tv.png",
             "group": "Islamic TV",
             "stream_url": "https://media2.streambrothers.com:1936/8122/8122/playlist.m3u8"
-        },
-        {
-            "name": "Makkah TV_337",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/makkah-tv.png",
-            "group": "Islamic TV",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkahtv.stream/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "Peace TV English",
@@ -1060,12 +962,6 @@
             "stream_url": "http://m.live.net.sa:1935/live/sunnah/chunklist.m3u8?v=1"
         },
         {
-            "name": "B4U Movies_154",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/b4u-movies.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/1547127176?profile=pass"
-        },
-        {
             "name": "B4U Movies_155",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/b4u-movies.png",
             "group": "Indian Movie Channels",
@@ -1096,18 +992,6 @@
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8"
         },
         {
-            "name": "Colors Cineplex Bollywood",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/colors-cineplex-bollywood.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/1709941389?profile=pass"
-        },
-        {
-            "name": "Colors Cineplex Superhits",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/colors-cineplex-superhits-576p.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/2039746374?profile=pass"
-        },
-        {
             "name": "Goldmines",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines.png",
             "group": "Indian Movie Channels",
@@ -1120,34 +1004,16 @@
             "stream_url": "https://fta.ektv.in/live/584/master.m3u8"
         },
         {
-            "name": "Goldmines Bollywood_301",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-bollywood.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/1436412639?profile=pass"
-        },
-        {
             "name": "Goldmines Bollywood_41",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-bollywood.png",
             "group": "Indian Movie Channels",
             "stream_url": "https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8"
         },
         {
-            "name": "Goldmines Movies",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-movies.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "https://tvsen3.aynaott.com/5CGfPvGp/index.m3u8"
-        },
-        {
             "name": "Goldmines Movies 2",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-movies.png",
             "group": "Indian Movie Channels",
             "stream_url": "https://cdn.pishow.tv/ott/live/1460/master.m3u8"
-        },
-        {
-            "name": "Goldmines Movies_303",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-movies.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/1393052638?profile=pass"
         },
         {
             "name": "Goldmines Movies_304",
@@ -1166,12 +1032,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines-movies.png",
             "group": "Indian Movie Channels",
             "stream_url": "https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8"
-        },
-        {
-            "name": "Goldmines_297",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/goldmines.png",
-            "group": "Indian Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/863672695?profile=pass"
         },
         {
             "name": "Goldmines_298",
@@ -1216,16 +1076,31 @@
             "stream_url": "https://drk6xq0vhn.gpcdn.net/hls/set_max_m4fb8dz2wp6kr9s_720/index.m3u8"
         },
         {
+            "name": "Sony Max",
+            "logo": "https://i.postimg.cc/zX9vhkhB/20250529-131834.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009249",
+            "referer": "https://techandeat.online"
+        },
+        {
             "name": "Sony Max 1",
             "logo": "https://i.postimg.cc/251DGH5w/20260930-231736.png",
             "group": "Indian Movie Channels",
             "stream_url": "http://live.balajibroadband.com:3500/live/3418.m3u8"
         },
         {
-            "name": "Star Gold Thrills",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png",
+            "name": "Sony Max 2",
+            "logo": "https://i.postimg.cc/KYbYqvJh/20250529-132238.png",
             "group": "Indian Movie Channels",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000044878",
+            "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Sony Max HD",
+            "logo": "https://i.postimg.cc/zX9vhkhB/20250529-131834.png",
+            "group": "Indian Movie Channels",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009247",
+            "referer": "https://techandeat.online"
         },
         {
             "name": "Zee Action",
@@ -1276,10 +1151,11 @@
             "stream_url": "http://190.108.91.206:9050/play/a035/index.m3u8"
         },
         {
-            "name": "Movies Now",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/movies-now.png",
+            "name": "Sony Pix",
+            "logo": "https://i.postimg.cc/yYTkD4Z5/20251222-213710.png",
             "group": "English Movie Channels",
-            "stream_url": "http://27.124.71.27/Movies_Now/index.m3u8"
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009258",
+            "referer": "https://techandeat.online"
         },
         {
             "name": "Star Maa Movies",
@@ -1288,10 +1164,10 @@
             "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:maamovies.smil/chunklist_b2628000.m3u8"
         },
         {
-            "name": "Star Utsav Movies",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/star-utsav-movies.png",
-            "group": "English Movie Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/1225596390?profile=pass"
+            "name": "Colors Bangla Cinema",
+            "logo": "https://i.postimg.cc/13pfykGD/20250602-220936.png",
+            "group": "Kolkata Bangla",
+            "stream_url": "http://103.114.11.37:8081/Colors-bangla-cinema/tracks-v1a1/mono.m3u8?token=scn"
         },
         {
             "name": "Colors Bangla HD",
@@ -1370,12 +1246,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/sangeet-bangla.png",
             "group": "Kolkata Bangla",
             "stream_url": "https://fta.ektv.in/live/379/master.m3u8"
-        },
-        {
-            "name": "Sony Aath",
-            "logo": "https://i.postimg.cc/ZqgJkbLq/20250529-111438.png",
-            "group": "Kolkata Bangla",
-            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/62.m3u8"
         },
         {
             "name": "Sony Aath_37",
@@ -1474,10 +1344,16 @@
             "stream_url": "https://retroblast.tv/hls/0/stream.m3u8?cachebust=f224d41f"
         },
         {
-            "name": "Disney Channel East",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/disney_channel_east.png",
+            "name": "Disney Channel_261",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/disney-channel-india.png",
             "group": "Kids Channels",
-            "stream_url": "http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/2206.ts"
+            "stream_url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/19741.ts"
+        },
+        {
+            "name": "Disney Channel_75",
+            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/disney-channel-india.png",
+            "group": "Kids Channels",
+            "stream_url": "http://212.5.144.156:8080/disney/index.m3u8"
         },
         {
             "name": "Nick Bangla",
@@ -1492,22 +1368,10 @@
             "stream_url": "https://tvsen5.aynaott.com/discoveryfamily/index.m3u8"
         },
         {
-            "name": "Animal Planet",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/animal_planet.png",
-            "group": "Documentary & Info",
-            "stream_url": "https://tiger-hub.vercel.app@vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8"
-        },
-        {
             "name": "Animal Planet HD",
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/images_a49ebd8c1eabd8e7cc20297a0fda92f5_playmist_animal_planet_hd_400x400.jpg",
             "group": "Documentary & Info",
             "stream_url": "https://tvsen3.aynaott.com/wpa56Uk3/index.m3u8"
-        },
-        {
-            "name": "Animal Planet_136",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/animal-planet.png",
-            "group": "Documentary & Info",
-            "stream_url": "https://vodzong.mjunoon.tv:8087/streamtest/Animal-Planet-158-3/playlist.m3u8"
         },
         {
             "name": "Discovery HD",
@@ -1520,12 +1384,6 @@
             "logo": "https://i.postimg.cc/k4xxp7zh/20251002-232031.png",
             "group": "Documentary & Info",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/63.m3u8"
-        },
-        {
-            "name": "Discovery Science 2",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/discovery_science.webp",
-            "group": "Documentary & Info",
-            "stream_url": "http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/20866.ts"
         },
         {
             "name": "Discovery Turbo",
@@ -1550,12 +1408,6 @@
             "logo": "https://static.wikia.nocookie.net/logopedia/images/5/5b/History_TV18_HD_2022.png",
             "group": "Documentary & Info",
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/History_TV18_Hindi_NW18_MOB/output01/master.m3u8"
-        },
-        {
-            "name": "Investigation Discovery HD",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/investigation_discovery_hd.webp",
-            "group": "Documentary & Info",
-            "stream_url": "http://fortv.cc:8080/live/yd6H5yb2kK/nrkVd2ex3X/53687.ts"
         },
         {
             "name": "Nat Geo TV",
@@ -1604,12 +1456,6 @@
             "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/b4u-music.png",
             "group": "Music Channels",
             "stream_url": "http://103.175.73.12:8080/live/157/master.m3u8"
-        },
-        {
-            "name": "B4U Music_160",
-            "logo": "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/main/images/b4u-music.png",
-            "group": "Music Channels",
-            "stream_url": "http://163.61.226.31:9981/stream/channelid/494430938?profile=pass"
         },
         {
             "name": "B4U Music_162",
