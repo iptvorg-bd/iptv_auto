@@ -5,12 +5,20 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MY_NAME = "Ahmed Store"
 
+# ফাইলগুলোর নাম
+COLLECTED_M3U_FILE = "collected_playlist.m3u"  # ধাপ ১: সব প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল এখানে জমা হবে
+FINAL_M3U_FILE = "playlist.m3u"                # ধাপ ২: ডুপ্লিকেট URL বাদ দিয়ে ফ্রেশ স্ট্রিমের ফাইনাল প্লেলিস্ট
+FINAL_JSON_FILE = "playlist.json"
+
+# True রাখলে প্রতিটি স্ট্রিম চেক করে শুধু ফ্রেশ ও চালু লিংকগুলো ফাইনাল প্লেলিস্টে নেবে।
+# False রাখলে স্ট্রিম চেক না করেই ডুপ্লিকেট বাদ দিয়ে ফাইনাল প্লেলিস্ট বানাবে।
+CHECK_STREAM_ALIVE = True
+
 # ==============================================================================
 # ১. কাস্টম প্লেলিস্টের URL গুলো এখানে বসান (খালি স্লট অটোমেটিক স্কিপ করবে)
-#    ১ নম্বর থেকে শুরু করে সব প্লেলিস্ট থেকেই চ্যানেল কালেক্ট করে কম্বাইন করা হবে
 # ==============================================================================
 CUSTOM_PLAYLISTS = [
-    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১ (প্রধান)
     "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ২ (উদাহরণ: "https://example.com/playlist2.m3u")
     "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
@@ -24,7 +32,7 @@ CUSTOM_PLAYLISTS = [
 ]
 
 # ==============================================================================
-# ২. যে শব্দগুলো চ্যানেলের নাম বা গ্রুপে থাকলে চ্যানেলটি বাদ যাবে (চাইলে পরিবর্তন করতে পারেন)
+# ২. যে শব্দগুলো চ্যানেলের নাম বা গ্রুপে থাকলে চ্যানেলটি বাদ যাবে
 # ==============================================================================
 EXCLUDED_WORDS = [
     'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
@@ -35,7 +43,6 @@ EXCLUDED_WORDS = [
 
 # ==============================================================================
 # ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট (ভবিষ্যতে এখান থেকেই কিওয়ার্ড বাড়াতে/কমাতে/বদলাতে পারবেন)
-#    সতর্কতা: কিওয়ার্ড বড়/ছোট হাতের অক্ষর যেভাবেই লেখেন সমস্যা নেই, তবে বাইরের কোনো চ্যানেল ঢুকবে না।
 # ==============================================================================
 KEYWORD_CATEGORIES = [
     {
@@ -147,7 +154,6 @@ def normalize_text(text):
     return re.sub(r'[^a-zA-Z0-9]', '', text).lower()
 
 def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
-    # '&pictures' বা '&flix' এর মতো '&' যুক্ত কিওয়ার্ড নিখুঁতভাবে ম্যাচ করার জন্য
     if '&' in keyword:
         kw_compact = re.sub(r'\s+', '', keyword.lower())
         name_compact = re.sub(r'\s+', '', raw_lower_name)
@@ -157,23 +163,17 @@ def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
     if not kw_tokens:
         return False
 
-    # এক শব্দের কিওয়ার্ড হলে
     if len(kw_tokens) == 1:
         tok = kw_tokens[0]
         if len(tok) <= 4:
-            # ছোট শব্দ (যেমন: ntv, rtv, gtv, wb, hbo) পূর্ণ শব্দ হিসেবে ম্যাচ করবে
             pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
             return re.search(pattern, clean_space_name) is not None
         return tok in norm_name
 
-    # একাধিক শব্দের কিওয়ার্ড হলে (যেমন: "sony sports", "sony teen", "star sports"):
-    # ১) স্পেস ছাড়া একসাথে ম্যাচ (যেমন: "SonySportsHD", "TSports")
     kw_joined = ''.join(kw_tokens)
     if len(kw_joined) >= 5 and kw_joined in norm_name:
         return True
 
-    # ২) কিওয়ার্ডের প্রতিটি শব্দ চ্যানেলের নামের যেকোনো জায়গায় থাকলে ম্যাচ করবে
-    # (যেমন: "sony sports" ম্যাচ করবে "Sony sports", "Sony Teen Sports", "SONY SPORTS TEEN" সবগুলোতে)
     for tok in kw_tokens:
         pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
         if not re.search(pattern, clean_space_name):
@@ -193,26 +193,6 @@ def is_excluded_channel(channel):
             return True
     return False
 
-def check_single_stream(item):
-    ch_obj, res, p_idx, c_idx = item
-    url = ch_obj['stream_url']
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-    
-    try:
-        response = requests.head(url, headers=headers, timeout=8, allow_redirects=True)
-        if response.status_code == 200:
-            return item
-        
-        with requests.get(url, headers=headers, timeout=8, stream=True, allow_redirects=True) as get_resp:
-            if get_resp.status_code == 200:
-                return item
-    except Exception:
-        pass
-    
-    return None
-
 def categorize_and_prioritize(channel):
     raw_lower_name = channel['name'].lower()
     clean_space_name = re.sub(r'[^a-z0-9]+', ' ', raw_lower_name).strip()
@@ -227,7 +207,93 @@ def categorize_and_prioritize(channel):
 
     return None
 
-def fetch_channels_by_group():
+def parse_m3u_text(raw_data):
+    """M3U টেক্সট থেকে চ্যানেল, লোগো, গ্রুপ, #EXTVLCOPT ও stream_url আলাদা করে"""
+    channels = []
+    lines = raw_data.splitlines()
+    i = 0
+
+    while i < len(lines):
+        line = lines[i].strip()
+        if line.startswith("#EXTINF:"):
+            info_line = line
+            stream_url = ""
+            extvlcopt_lines = []
+            referer = ""
+            user_agent = ""
+
+            j = i + 1
+            while j < len(lines):
+                next_line = lines[j].strip()
+                if not next_line:
+                    j += 1
+                    continue
+                if next_line.startswith("#EXTINF:"):
+                    break
+                if next_line.startswith("#EXTVLCOPT:"):
+                    extvlcopt_lines.append(next_line)
+                    lower_opt = next_line.lower()
+                    if lower_opt.startswith("#extvlcopt:http-referrer="):
+                        referer = next_line.split("=", 1)[1].strip()
+                    elif lower_opt.startswith("#extvlcopt:http-user-agent="):
+                        user_agent = next_line.split("=", 1)[1].strip()
+                    j += 1
+                    continue
+                if not next_line.startswith("#"):
+                    stream_url = next_line
+                    i = j
+                    break
+                j += 1
+
+            if stream_url:
+                raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
+                clean_name = clean_channel_name(raw_name)
+
+                logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
+                logo = logo_match.group(1) if logo_match else ""
+
+                group_match = re.search(r'group-title="([^"]*)"', info_line)
+                group = group_match.group(1) if group_match else "General"
+
+                channels.append({
+                    "name": clean_name if clean_name else raw_name,
+                    "logo": logo,
+                    "group": group,
+                    "stream_url": stream_url,
+                    "extvlcopt": extvlcopt_lines,
+                    "referer": referer,
+                    "user_agent": user_agent
+                })
+        i += 1
+
+    return channels
+
+def check_single_stream(item):
+    ch_obj, priority, order_idx = item
+    url = ch_obj['stream_url']
+
+    headers = {
+        "User-Agent": ch_obj.get("user_agent") or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    if ch_obj.get("referer"):
+        headers["Referer"] = ch_obj["referer"]
+        headers["Origin"] = ch_obj["referer"].rstrip("/")
+
+    try:
+        with requests.get(url, headers=headers, timeout=10, stream=True, allow_redirects=True) as get_resp:
+            if get_resp.status_code in (200, 206):
+                # ভুয়া 200 HTML এরর পেজ বাদ দেওয়ার জন্য Content-Type চেক
+                content_type = get_resp.headers.get("Content-Type", "").lower()
+                if "text/html" in content_type:
+                    return None
+                return item
+    except Exception:
+        pass
+
+    return None
+
+def step1_collect_all_keyword_channels():
+    """ধাপ ১: সবগুলো প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল কালেক্ট করে collected_playlist.m3u তে সেভ করবে"""
     sources = []
     for idx, custom_url in enumerate(CUSTOM_PLAYLISTS, start=1):
         clean_url = custom_url.strip()
@@ -236,16 +302,15 @@ def fetch_channels_by_group():
 
     if not sources:
         print("⚠️ কোনো বৈধ কাস্টম প্লেলিস্ট URL পাওয়া যায়নি!")
-        return
+        return 0
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print(f"🔄 মোট {len(sources)} টি কাস্টম প্লেলিস্ট থেকে কিওয়ার্ড অনুযায়ী চ্যানেল কালেক্ট করা হচ্ছে...")
+    print(f"🔄 [ধাপ ১] মোট {len(sources)} টি প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল কালেক্ট করা হচ্ছে...")
 
-    candidate_channels = []
-    seen_urls = set()  # শুধুমাত্র ডুপ্লিকেট stream_url বাদ দেবে, একই নামের ভিন্ন URL সবগুলো নেবে
+    all_collected = []
 
     for url, playlist_idx in sources:
         try:
@@ -258,89 +323,102 @@ def fetch_channels_by_group():
             print(f"⚠️ প্লেলিস্ট #{playlist_idx} এরর: {e}")
             continue
 
-        lines = raw_data.splitlines()
-        i = 0
-        channel_order = 0
-        matched_in_this_playlist = 0
+        parsed_channels = parse_m3u_text(raw_data)
+        matched_count = 0
 
-        while i < len(lines):
-            line = lines[i].strip()
-            if line.startswith("#EXTINF:"):
-                info_line = line
-                stream_url = ""
+        for ch_obj in parsed_channels:
+            if not is_excluded_channel(ch_obj):
+                res = categorize_and_prioritize(ch_obj)
+                if res is not None:
+                    _, _, display_group = res
+                    ch_obj["group"] = display_group
+                    all_collected.append(ch_obj)
+                    matched_count += 1
 
-                j = i + 1
-                while j < len(lines):
-                    next_line = lines[j].strip()
-                    if not next_line:
-                        j += 1
-                        continue
-                    if next_line.startswith("#EXTINF:"):
-                        break
-                    if not next_line.startswith("#"):
-                        stream_url = next_line
-                        i = j
-                        break
-                    j += 1
+        print(f"📥 প্লেলিস্ট #{playlist_idx} থেকে {matched_count} টি কিওয়ার্ড-ম্যাচড চ্যানেল কালেক্ট হয়েছে।")
 
-                if stream_url and stream_url not in seen_urls:
-                    raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
-                    clean_name = clean_channel_name(raw_name)
+    # প্রথম প্লেলিস্ট ফাইল (collected_playlist.m3u) তৈরি
+    m3u_lines = [f'#EXTM3U name="{MY_NAME} Collected | Total: {len(all_collected)}"\n\n']
+    for ch in all_collected:
+        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["group"]}",{ch["name"]}\n')
+        for opt_line in ch.get("extvlcopt", []):
+            m3u_lines.append(f'{opt_line}\n')
+        m3u_lines.append(f'{ch["stream_url"]}\n')
 
-                    logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
-                    logo = logo_match.group(1) if logo_match else ""
+    with open(COLLECTED_M3U_FILE, "w", encoding="utf-8") as cf:
+        cf.writelines(m3u_lines)
 
-                    group_match = re.search(r'group-title="([^"]*)"', info_line)
-                    group = group_match.group(1) if group_match else "General"
+    print(f"💾 [ধাপ ১ সম্পন্ন] সর্বমোট {len(all_collected)} টি চ্যানেল '{COLLECTED_M3U_FILE}' ফাইলে সেভ হয়েছে।\n")
+    return len(all_collected)
 
-                    ch_obj = {
-                        "name": clean_name if clean_name else raw_name,
-                        "logo": logo,
-                        "group": group,
-                        "stream_url": stream_url
-                    }
+def step2_build_fresh_final_playlist():
+    """ধাপ ২: collected_playlist.m3u থেকে ডুপ্লিকেট স্ট্রিম বাদ দিয়ে ফ্রেশ ও চালু স্ট্রিমগুলো ফাইনাল প্লেলিস্টে নেবে"""
+    try:
+        with open(COLLECTED_M3U_FILE, "r", encoding="utf-8") as cf:
+            collected_raw = cf.read()
+    except FileNotFoundError:
+        print(f"⚠️ '{COLLECTED_M3U_FILE}' ফাইল পাওয়া যায়নি!")
+        return
 
-                    if not is_excluded_channel(ch_obj):
-                        res = categorize_and_prioritize(ch_obj)
-                        if res is not None:
-                            channel_order += 1
-                            matched_in_this_playlist += 1
-                            candidate_channels.append((ch_obj, res, playlist_idx, channel_order))
-                            seen_urls.add(stream_url)
-            i += 1
+    collected_channels = parse_m3u_text(collected_raw)
+    if not collected_channels:
+        print("⚠️ কালেক্টেড প্লেলিস্টে কোনো চ্যানেল নেই!")
+        return
 
-        print(f"📥 প্লেলিস্ট #{playlist_idx} থেকে {matched_in_this_playlist} টি নতুন কিওয়ার্ড-ম্যাচড চ্যানেল পাওয়া গেছে।")
+    # গ্রুপ নাম অনুযায়ী প্রায়োরিটি ম্যাপ তৈরি
+    group_priority_map = {cat["group"]: cat["priority"] for cat in KEYWORD_CATEGORIES}
 
-    print(f"\n⚡ সর্বমোট {len(candidate_channels)} টি ইউনিক স্ট্রিম চেক করা হচ্ছে...")
+    # ডুপ্লিকেট stream_url বাদ দেওয়া (একই নামের ভিন্ন stream_url থাকলে সবগুলোই থাকবে)
+    unique_stream_items = []
+    seen_urls = set()
 
-    working_channels = []
-    
-    with ThreadPoolExecutor(max_workers=80) as executor:
-        futures = [executor.submit(check_single_stream, item) for item in candidate_channels]
-        for future in as_completed(futures):
-            result = future.result()
-            if result:
-                working_channels.append(result)
+    for idx, ch in enumerate(collected_channels):
+        stream_url = ch["stream_url"].strip()
+        if stream_url and stream_url not in seen_urls:
+            seen_urls.add(stream_url)
+            priority = group_priority_map.get(ch["group"], 99)
+            unique_stream_items.append((ch, priority, idx))
 
-    working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower(), x[2], x[3]))
+    duplicate_removed = len(collected_channels) - len(unique_stream_items)
+    print(f"🧹 [ধাপ ২] '{COLLECTED_M3U_FILE}' থেকে {duplicate_removed} টি ডুপ্লিকেট স্ট্রিম URL বাদ দেওয়া হয়েছে।")
 
-    total_count = len(working_channels)
+    if CHECK_STREAM_ALIVE:
+        print(f"⚡ {len(unique_stream_items)} টি ইউনিক স্ট্রিম লাইভ চেক করা হচ্ছে (শুধু ফ্রেশ ও চালু লিংক নেওয়া হবে)...")
+        fresh_channels = []
+        with ThreadPoolExecutor(max_workers=80) as executor:
+            futures = [executor.submit(check_single_stream, item) for item in unique_stream_items]
+            for future in as_completed(futures):
+                result = future.result()
+                if result:
+                    fresh_channels.append(result)
+    else:
+        print(f"⏭️ স্ট্রিম চেক স্কিপ করে {len(unique_stream_items)} টি ইউনিক স্ট্রিম নেওয়া হচ্ছে...")
+        fresh_channels = unique_stream_items
 
-    m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
-    m3u_lines = [m3u_header]
+    # ক্যাটাগরি ও নাম অনুযায়ী সাজানো
+    fresh_channels.sort(key=lambda x: (x[1], x[0]["name"].lower(), x[2]))
+
+    total_count = len(fresh_channels)
+    m3u_lines = [f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n']
     json_channels = []
 
-    for ch, res, _, _ in working_channels:
-        p, sub_p, display_group = res
+    for ch, _, _ in fresh_channels:
+        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["group"]}",{ch["name"]}\n')
+        for opt_line in ch.get("extvlcopt", []):
+            m3u_lines.append(f'{opt_line}\n')
+        m3u_lines.append(f'{ch["stream_url"]}\n')
 
-        m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
-        
-        json_channels.append({
+        json_item = {
             "name": ch["name"],
             "logo": ch["logo"],
-            "group": display_group,
+            "group": ch["group"],
             "stream_url": ch["stream_url"]
-        })
+        }
+        if ch.get("referer"):
+            json_item["referer"] = ch["referer"]
+        if ch.get("user_agent"):
+            json_item["user_agent"] = ch["user_agent"]
+        json_channels.append(json_item)
 
     json_data = {
         "playlist_name": MY_NAME,
@@ -349,14 +427,20 @@ def fetch_channels_by_group():
         "channels": json_channels
     }
 
-    with open("playlist.json", "w", encoding="utf-8") as jf:
+    with open(FINAL_JSON_FILE, "w", encoding="utf-8") as jf:
         json.dump(json_data, jf, indent=4, ensure_ascii=False)
 
-    with open("playlist.m3u", "w", encoding="utf-8") as mf:
+    with open(FINAL_M3U_FILE, "w", encoding="utf-8") as mf:
         mf.writelines(m3u_lines)
 
-    print(f"\n✅ প্লেলিস্ট ফিল্টারিং ও ফাইল জেনারেট সম্পন্ন!")
-    print(f"📌 মোট কার্যকর চ্যানেল: {total_count} টি")
+    print(f"\n✅ ফাইনাল প্লেলিস্ট তৈরি সম্পন্ন!")
+    print(f"📄 কালেক্টেড ফাইল: {COLLECTED_M3U_FILE} ({len(collected_channels)} টি)")
+    print(f"📄 ফাইনাল ফ্রেশ ফাইল: {FINAL_M3U_FILE} ও {FINAL_JSON_FILE} ({total_count} টি ফ্রেশ চ্যানেল)")
+
+def main():
+    count = step1_collect_all_keyword_channels()
+    if count > 0:
+        step2_build_fresh_final_playlist()
 
 if __name__ == "__main__":
-    fetch_channels_by_group()
+    main()
