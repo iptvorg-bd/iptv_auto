@@ -3,8 +3,23 @@ import json
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-MY_NAME = "Ahmed Store"
-MAX_TOTAL_CHANNELS = 250
+MY_NAME = "Ireen Tv"
+MAX_TOTAL_CHANNELS = 000
+
+# এখানে আপনার কাস্টম প্লেলিস্টের URL গুলো বসান (খালি রাখলে সমস্যা নেই, অটোমেটিক স্কিপ করবে)
+CUSTOM_PLAYLISTS = [
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",
+    "",  # কাস্টম প্লেলিস্ট ১ (উদাহরণ: "https://example.com/playlist1.m3u")
+    "",  # কাস্টম প্লেলিস্ট ২
+    "",  # কাস্টম প্লেলিস্ট ৩
+    "",  # কাস্টম প্লেলিস্ট ৪
+    "",  # কাস্টম প্লেলিস্ট ৫
+    "",  # কাস্টম প্লেলিস্ট ৬
+    "",  # কাস্টম প্লেলিস্ট ৭
+    "",  # কাস্টম প্লেলিস্ট ৮
+    "",  # কাস্টম প্লেলিস্ট ৯
+    "",  # কাস্টম প্লেলিস্ট ১০
+]
 
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
@@ -40,9 +55,9 @@ def check_single_stream(item):
         if response.status_code == 200:
             return item
         
-        response = requests.get(url, headers=headers, timeout=8, stream=True, allow_redirects=True)
-        if response.status_code == 200:
-            return item
+        with requests.get(url, headers=headers, timeout=8, stream=True, allow_redirects=True) as get_resp:
+            if get_resp.status_code == 200:
+                return item
     except Exception:
         pass
     
@@ -53,8 +68,21 @@ def categorize_and_prioritize(channel):
     name = channel['name'].lower()
     norm_name = normalize_text(name)
 
-    # ১. Bangladeshi TV
-    if 'bangladesh' in group or channel.get('source_country') == 'bd':
+    # ১. Bangladeshi TV (কাস্টম প্লেলিস্টের বাংলা চ্যানেল ধরার জন্য জনপ্রিয় চ্যানেলের নাম যুক্ত করা হয়েছে)
+    bd_keywords = [
+        'somoy', 'jamuna', 'ekattor', 'independent', 'channel 24', 'channel24',
+        'dbc news', 'news 24', 'news24', 'ekushey', 'ntv', 'rtv', 'atn bangla',
+        'atn news', 'banglavision', 'boishakhi', 'desh tv', 'maasranga', 'channel i',
+        'deepto', 'btv', 'bangladesh television', 'nagorik', 'mohona', 'asian tv',
+        'sa tv', 'satv', 'bijoy tv', 'ananda tv', 'nexus tv', 'duronto', 'mytv',
+        'gaan bangla', 'global tv', 'ekhon', 'green tv', 'channel s', 'channel 9',
+        'bangla tv', 'sangbad'
+    ]
+    if (
+        'bangladesh' in group
+        or channel.get('source_country') == 'bd'
+        or any(normalize_text(bd) in norm_name for bd in bd_keywords)
+    ):
         return (1, 0, "Bangladeshi TV")
 
     # ২. Sports Channels
@@ -136,22 +164,27 @@ def fetch_channels_by_group():
         ("https://iptv-org.github.io/iptv/countries/in.m3u", "in"),
         ("https://iptv-org.github.io/iptv/countries/pk.m3u", "pk"),
         ("https://iptv-org.github.io/iptv/categories/sports.m3u", "sports"),
-        ("https://iptv-org.github.io/iptv/categories/news.m3u", "news"), # নিউজ সোর্স যুক্ত করা হয়েছে
+        ("https://iptv-org.github.io/iptv/categories/news.m3u", "news"),
         ("https://iptv-org.github.io/iptv/categories/religious.m3u", "religious"),
         ("https://iptv-org.github.io/iptv/categories/movies.m3u", "movies"),
         ("https://iptv-org.github.io/iptv/categories/animation.m3u", "animation"),
-        ("https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u", "custom"),
         ("https://iptv-org.github.io/iptv/categories/documentary.m3u", "documentary")
     ]
+
+    # CUSTOM_PLAYLISTS থেকে বৈধ URL গুলো সোর্সে যুক্ত করা হচ্ছে
+    for custom_url in CUSTOM_PLAYLISTS:
+        clean_url = custom_url.strip()
+        if clean_url and clean_url.startswith(("http://", "https://")):
+            sources.append((clean_url, "custom"))
     
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print("🔄 সোর্স থেকে ফিল্টারড চ্যানেল ফেচ করা হচ্ছে...")
+    print("🔄 সোর্স ও কাস্টম প্লেলিস্ট থেকে ফিল্টারড চ্যানেল ফেচ করা হচ্ছে...")
 
     candidate_channels = []
-    seen_urls = set()
+    seen_urls = set()  # শুধুমাত্র ডুপ্লিকেট স্ট্রিম URL আটকাবে, একই নামের ভিন্ন URL রাখবে
 
     for url, country_code in sources:
         try:
@@ -169,10 +202,23 @@ def fetch_channels_by_group():
             if line.startswith("#EXTINF:"):
                 info_line = line
                 stream_url = ""
-                if i + 1 < len(lines) and not lines[i + 1].startswith("#"):
-                    stream_url = lines[i + 1].strip()
-                    i += 1
+                
+                # #EXTINF এর পর #EXTVLCOPT বা ফাঁকা লাইন থাকলে তা স্কিপ করে আসল URL নেবে
+                j = i + 1
+                while j < len(lines):
+                    next_line = lines[j].strip()
+                    if not next_line:
+                        j += 1
+                        continue
+                    if next_line.startswith("#EXTINF:"):
+                        break
+                    if not next_line.startswith("#"):
+                        stream_url = next_line
+                        i = j
+                        break
+                    j += 1
 
+                # একই স্ট্রিম URL দুইবার না আসার জন্য seen_urls চেক
                 if stream_url and stream_url not in seen_urls:
                     raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
                     clean_name = clean_channel_name(raw_name)
@@ -232,6 +278,7 @@ def fetch_channels_by_group():
             if result:
                 working_channels.append(result)
 
+    # নামের ক্রমানুসারে সাজানো (যাতে একই নামের একাধিক সার্ভার পরপর থাকে)
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower()))
 
     final_selected_channels = working_channels[:MAX_TOTAL_CHANNELS]
