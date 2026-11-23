@@ -18,9 +18,9 @@ SKIP_CHECK_FOR_BDIX = True
 # ১. কাস্টম প্লেলিস্টের URL গুলো এখানে বসান (খালি স্লট অটোমেটিক স্কিপ করবে)
 # ==============================================================================
 CUSTOM_PLAYLISTS = [
-    "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # প্লেলিস্ট ১
-    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # কাস্টম প্লেলিস্ট ২
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/new_isp.m3u",  # কাস্টম প্লেলিস্ট ৩
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
+    "",  # কাস্টম প্লেলিস্ট ২
+    "",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
     "",  # কাস্টম প্লেলিস্ট ৬
@@ -47,21 +47,31 @@ EXCLUDED_WORDS = [
 KEYWORD_CATEGORIES = [
     {
         "priority": 1,
-        "group": "Bangladeshi TV",
+        "group": "Bangla",
         "keywords": [
-            'somoy', 'jamuna', 'ekattor', 'independent', 'channel 24', 'channel24',
-            'dbc news', 'news 24', 'news24', 'ekushey', 'ntv', 'rtv', 'atn bangla',
-            'atn news', 'banglavision', 'boishakhi', 'desh tv', 'maasranga', 'channel i',
-            'deepto', 'btv', 'bangladesh television', 'nagorik', 'mohona', 'asian tv',
-            'sa tv', 'satv', 'bijoy tv', 'ananda tv', 'nexus tv', 'duronto', 'mytv',
-            'gaan bangla', 'global tv', 'ekhon', 'green tv', 'channel s', 'channel 9',
-            'bangla tv', 'sangbad'
+            # বাংলাদেশের জাতীয়, নিউজ, বিনোদন ও সব চ্যানেল
+            'btv', 'bangladesh television', 'btv world', 'btv chattogram', 'btv news',
+            'sangsad', 'somoy', 'jamuna', 'ekattor', 'independent', 'channel 24', 'channel24',
+            'dbc news', 'news 24', 'news24', 'atn news', 'ekhon', 'desh tv', 'star news bd',
+            'atn bangla', 'channel i', 'ntv', 'rtv', 'ekushey', 'etv bangla', 'banglavision',
+            'bangla vision', 'boishakhi', 'maasranga', 'deepto', 'sa tv', 'satv', 'asian tv',
+            'mohona', 'bijoy tv', 'mytv', 'channel 9', 'nagorik', 'ananda tv', 'nexus tv',
+            'global tv', 'green tv', 'channel s', 'bangla tv', 'sangbad', 'duronto',
+            'gaan bangla', 'gaanbangla', 'movie bangla', 'channel 16', 'channel sixteen',
+            'titas tv', 'diganta', 'islamic tv', 'peace tv bangla', 'iqra bangla',
+            'madani bangla', 'atn music', 'bangla 21', 'falguni',
+            # কলকাতা বাংলার সব জনপ্রিয় চ্যানেল
+            'star jalsha', 'star jalsha movies', 'jalsha movies', 'zee bangla',
+            'zee bangla cinema', 'colors bangla', 'abp ananda', 'sony aath',
+            'sangeet bangla', 'zee 24 ghanta', '24 ghanta', 'enterr10 bangla',
+            'news18 bangla', 'tv9 bangla', 'aakash aath', 'sun bangla', 'rupashi bangla',
+            'dhoom music', 'kolkata tv', 'republic bangla', 'calcutta news', 'r plus'
         ],
         "exclude": []
     },
     {
         "priority": 2,
-        "group": "Sports Channels",
+        "group": "Sports",
         "keywords": [
             't sports', 'tsports', 'gazi tv', 'gtv', 'star sports', 'sony sports',
             'sony ten', 'sony teen', 'ten sports', 'sports18', 'sports 18', 'willow',
@@ -80,17 +90,22 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 4,
-        "group": "Indian Movie Channels",
+        "group": "Hindi Movie",
         "keywords": [
-            'star gold', 'sony max', 'zee cinema', 'and pictures', '&pictures',
-            'goldmines', 'b4u movies', 'colors cineplex', 'zee classic', 'zee action',
-            'rishtey cineplex'
+            'star gold', 'sony max', 'sony wah', 'zee cinema', 'zee classic',
+            'zee action', 'zee bollywood', 'zee anmol cinema', 'and pictures', '&pictures',
+            '&xplor', 'andxplor', 'colors cineplex', 'rishtey cineplex', 'b4u movies',
+            'b4u kadak', 'goldmines', 'utv movies', 'utv action', 'movies ok',
+            'shemaroo bollywood', 'maha movie', 'cinema tv', 'manoranjan tv',
+            'manoranjan movies', 'wow cinema', 'enterr10 movies', 'star utsav movies',
+            'housefull movies', 'housefull action', 'box cinema', 'abzy movies',
+            'abzy cool', 'movie house'
         ],
         "exclude": []
     },
     {
         "priority": 5,
-        "group": "English Movie Channels",
+        "group": "Movie",
         "keywords": [
             'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
             'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
@@ -99,17 +114,22 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 6,
-        "group": "Kolkata Bangla",
+        "group": "Hindi",
         "keywords": [
-            'star jalsha', 'star jalsha movies', 'zee bangla', 'zee bangla cinema', 'colors bangla',
-            'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla',
-            'news18 bangla', 'tv9 bangla', 'aakash aath'
+            'star plus', 'star bharat', 'star utsav', 'life ok',
+            'sony tv', 'sony entertainment', 'sony set', 'set india', 'set hd', 'set asia',
+            'sony sab', 'sab tv', 'sony pal',
+            'zee tv', 'zee anmol', 'zindagi',
+            'colors', 'colors rishtey', 'rishtey', '&tv', 'andtv',
+            'dangal', 'dangal 2', 'big magic', 'shemaroo tv', 'shemaroo umang',
+            'ishara', 'ishara tv', 'nazara', 'azaad', 'sahara one',
+            'dd national', 'dd bharati', 'dd retro', 'enterr10', 'manoranjan grand'
         ],
         "exclude": []
     },
     {
         "priority": 7,
-        "group": "Kids Channels",
+        "group": "Kids",
         "keywords": [
             'hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork',
             'sonic', 'nickelodeon', 'nick', 'disney'
@@ -127,9 +147,15 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 9,
-        "group": "Music Channels",
+        "group": "Music",
         "keywords": [
-            'mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla'
+            '9xm', '9x jalwa', '9x tashan', '9x jhakaas', 'mastiii', 'masti tv',
+            'zing', 'zoom', 'b4u music', 'mtv', 'mtv beats', 'mtv hits', 'mtv live',
+            'mtv music', 'mtv 90s', 'mtv 00s', 'club mtv', 'vh1', 'bindass',
+            'sony mix', 'music india', 'showbox', 'e24', 'mnet', '8xm', 'ary musik',
+            'trace urban', 'trace hits', 'now 70s', 'now 80s', 'now 90s', 'now rock',
+            'deluxe music', 'clubbing tv', 'kiss tv', 'magic tv', 'heart tv',
+            'sangeet bangla', 'gaan bangla', 'dhoom music'
         ],
         "exclude": []
     },
@@ -215,7 +241,6 @@ def is_bdix_or_local_url(url):
     return any(marker in lower_url for marker in bdix_markers)
 
 def fetch_playlist_content(url, playlist_idx):
-    """503 বা নেটওয়ার্ক সমস্যা হলে রিট্রাই এবং curl ব্যাকআপ দিয়ে প্লেলিস্ট ফেচ করে"""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -225,7 +250,6 @@ def fetch_playlist_content(url, playlist_idx):
 
     last_status = None
 
-    # ১) requests দিয়ে ৩ বার রিট্রাই
     for attempt in range(1, 4):
         try:
             response = requests.get(url, headers=headers, timeout=20, allow_redirects=True)
@@ -242,7 +266,6 @@ def fetch_playlist_content(url, playlist_idx):
                 print(f"⚠️ প্লেলিস্ট #{playlist_idx} requests এরর: {e}")
             time.sleep(attempt * 2)
 
-    # ২) ব্যাকআপ হিসেবে curl ব্যবহার (অনেক সার্ভার Python requests ব্লক করলে curl-এ কাজ করে)
     try:
         result = subprocess.run(
             ["curl", "-sSL", "--retry", "2", "--max-time", "20", "-A", headers["User-Agent"], url],
