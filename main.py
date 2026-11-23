@@ -6,21 +6,24 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 MY_NAME = "Ahmed Store"
 
 # ফাইলগুলোর নাম
-COLLECTED_M3U_FILE = "collected_playlist.m3u"  # ধাপ ১: সব প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল এখানে জমা হবে
-FINAL_M3U_FILE = "playlist.m3u"                # ধাপ ২: ডুপ্লিকেট URL বাদ দিয়ে ফ্রেশ স্ট্রিমের ফাইনাল প্লেলিস্ট
+COLLECTED_M3U_FILE = "collected_playlist.m3u"  # ধাপ ১: সব প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল (BDIX + International) এখানে জমা হবে
+FINAL_M3U_FILE = "playlist.m3u"                # ধাপ ২: ডুপ্লিকেট URL বাদ দিয়ে ফ্রেশ ও BDIX সার্ভারসহ ফাইনাল প্লেলিস্ট
 FINAL_JSON_FILE = "playlist.json"
 
-# True রাখলে প্রতিটি স্ট্রিম চেক করে শুধু ফ্রেশ ও চালু লিংকগুলো ফাইনাল প্লেলিস্টে নেবে।
-# False রাখলে স্ট্রিম চেক না করেই ডুপ্লিকেট বাদ দিয়ে ফাইনাল প্লেলিস্ট বানাবে।
+# True রাখলে ইন্টারন্যাশনাল স্ট্রিমগুলো লাইভ চেক করে শুধু চালু লিংক নেবে।
 CHECK_STREAM_ALIVE = True
+
+# True রাখলে GitHub Actions (বিদেশি সার্ভার) থেকে রান করলেও BDIX / বাংলাদেশের লোকাল সার্ভারগুলো বাদ পড়বে না।
+# (আপনি যদি নিজের বাংলাদেশের পিসি/ওয়াইফাই থেকে চালান এবং BDIX-ও লাইভ চেক করতে চান, তবে এটি False করতে পারেন)
+SKIP_CHECK_FOR_BDIX = True
 
 # ==============================================================================
 # ১. কাস্টম প্লেলিস্টের URL গুলো এখানে বসান (খালি স্লট অটোমেটিক স্কিপ করবে)
 # ==============================================================================
 CUSTOM_PLAYLISTS = [
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/new_isp.m3u",  # প্লেলিস্ট ১ (প্রধান)
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ২ (উদাহরণ: "https://example.com/playlist2.m3u")
-    "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # কাস্টম প্লেলিস্ট ৩
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
+    "",  # কাস্টম প্লেলিস্ট ২
+    "",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
     "",  # কাস্টম প্লেলিস্ট ৬
@@ -33,11 +36,12 @@ CUSTOM_PLAYLISTS = [
 
 # ==============================================================================
 # ২. যে শব্দগুলো চ্যানেলের নাম বা গ্রুপে থাকলে চ্যানেলটি বাদ যাবে
+#    (BDIX প্লেলিস্টের চ্যানেল যেন বাদ না পড়ে সেজন্য 'local' ও 'cable' সরানো হয়েছে)
 # ==============================================================================
 EXCLUDED_WORDS = [
     'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
     'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample',
-    'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm',
+    'shopping', 'teleshopping', 'home shop', 'radio', 'fm',
     'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto'
 ]
 
@@ -166,7 +170,7 @@ def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
     if len(kw_tokens) == 1:
         tok = kw_tokens[0]
         if len(tok) <= 4:
-            pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
+            pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd|tv)*\b'
             return re.search(pattern, clean_space_name) is not None
         return tok in norm_name
 
@@ -175,7 +179,7 @@ def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
         return True
 
     for tok in kw_tokens:
-        pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
+        pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd|tv)*\b'
         if not re.search(pattern, clean_space_name):
             return False
     return True
@@ -207,8 +211,15 @@ def categorize_and_prioritize(channel):
 
     return None
 
+def is_bdix_or_local_url(url):
+    """BDIX বা বাংলাদেশের লোকাল সার্ভার লিংক চেনার জন্য"""
+    lower_url = url.lower()
+    if re.match(r'^https?://(10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|103\.)', lower_url):
+        return True
+    bdix_markers = ['bdix', 'ftpbd', 'aynaott', 'jagobd', 'bdiptv', '.com.bd', '.net.bd', '.org.bd']
+    return any(marker in lower_url for marker in bdix_markers)
+
 def parse_m3u_text(raw_data):
-    """M3U টেক্সট থেকে চ্যানেল, লোগো, গ্রুপ, #EXTVLCOPT ও stream_url আলাদা করে"""
     channels = []
     lines = raw_data.splitlines()
     i = 0
@@ -246,7 +257,11 @@ def parse_m3u_text(raw_data):
                 j += 1
 
             if stream_url:
-                raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
+                raw_name = info_line.split(",")[-1].strip() if "," in info_line else ""
+                if not raw_name:
+                    tvg_name_match = re.search(r'tvg-name="([^"]*)"', info_line)
+                    raw_name = tvg_name_match.group(1).strip() if tvg_name_match else "Unknown Channel"
+
                 clean_name = clean_channel_name(raw_name)
 
                 logo_match = re.search(r'tvg-logo="([^"]*)"', info_line)
@@ -272,6 +287,10 @@ def check_single_stream(item):
     ch_obj, priority, order_idx = item
     url = ch_obj['stream_url']
 
+    # BDIX / লোকাল বাংলাদেশি সার্ভার হলে (এবং SKIP_CHECK_FOR_BDIX = True হলে) সরাসরি পাস করবে
+    if SKIP_CHECK_FOR_BDIX and is_bdix_or_local_url(url):
+        return item
+
     headers = {
         "User-Agent": ch_obj.get("user_agent") or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
@@ -282,7 +301,6 @@ def check_single_stream(item):
     try:
         with requests.get(url, headers=headers, timeout=10, stream=True, allow_redirects=True) as get_resp:
             if get_resp.status_code in (200, 206):
-                # ভুয়া 200 HTML এরর পেজ বাদ দেওয়ার জন্য Content-Type চেক
                 content_type = get_resp.headers.get("Content-Type", "").lower()
                 if "text/html" in content_type:
                     return None
@@ -293,7 +311,7 @@ def check_single_stream(item):
     return None
 
 def step1_collect_all_keyword_channels():
-    """ধাপ ১: সবগুলো প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল কালেক্ট করে collected_playlist.m3u তে সেভ করবে"""
+    """ধাপ ১: সব প্লেলিস্ট থেকে BDIX ও International সব কিওয়ার্ড চ্যানেল collected_playlist.m3u তে জমা করবে"""
     sources = []
     for idx, custom_url in enumerate(CUSTOM_PLAYLISTS, start=1):
         clean_url = custom_url.strip()
@@ -308,7 +326,7 @@ def step1_collect_all_keyword_channels():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print(f"🔄 [ধাপ ১] মোট {len(sources)} টি প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল কালেক্ট করা হচ্ছে...")
+    print(f"🔄 [ধাপ ১] মোট {len(sources)} টি প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল (BDIX + International) কালেক্ট করা হচ্ছে...")
 
     all_collected = []
 
@@ -337,7 +355,6 @@ def step1_collect_all_keyword_channels():
 
         print(f"📥 প্লেলিস্ট #{playlist_idx} থেকে {matched_count} টি কিওয়ার্ড-ম্যাচড চ্যানেল কালেক্ট হয়েছে।")
 
-    # প্রথম প্লেলিস্ট ফাইল (collected_playlist.m3u) তৈরি
     m3u_lines = [f'#EXTM3U name="{MY_NAME} Collected | Total: {len(all_collected)}"\n\n']
     for ch in all_collected:
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["group"]}",{ch["name"]}\n')
@@ -352,7 +369,7 @@ def step1_collect_all_keyword_channels():
     return len(all_collected)
 
 def step2_build_fresh_final_playlist():
-    """ধাপ ২: collected_playlist.m3u থেকে ডুপ্লিকেট স্ট্রিম বাদ দিয়ে ফ্রেশ ও চালু স্ট্রিমগুলো ফাইনাল প্লেলিস্টে নেবে"""
+    """ধাপ ২: collected_playlist.m3u থেকে ডুপ্লিকেট স্ট্রিম বাদ দিয়ে ফাইনাল ফ্রেশ প্লেলিস্ট তৈরি করবে"""
     try:
         with open(COLLECTED_M3U_FILE, "r", encoding="utf-8") as cf:
             collected_raw = cf.read()
@@ -365,10 +382,8 @@ def step2_build_fresh_final_playlist():
         print("⚠️ কালেক্টেড প্লেলিস্টে কোনো চ্যানেল নেই!")
         return
 
-    # গ্রুপ নাম অনুযায়ী প্রায়োরিটি ম্যাপ তৈরি
     group_priority_map = {cat["group"]: cat["priority"] for cat in KEYWORD_CATEGORIES}
 
-    # ডুপ্লিকেট stream_url বাদ দেওয়া (একই নামের ভিন্ন stream_url থাকলে সবগুলোই থাকবে)
     unique_stream_items = []
     seen_urls = set()
 
@@ -383,7 +398,7 @@ def step2_build_fresh_final_playlist():
     print(f"🧹 [ধাপ ২] '{COLLECTED_M3U_FILE}' থেকে {duplicate_removed} টি ডুপ্লিকেট স্ট্রিম URL বাদ দেওয়া হয়েছে।")
 
     if CHECK_STREAM_ALIVE:
-        print(f"⚡ {len(unique_stream_items)} টি ইউনিক স্ট্রিম লাইভ চেক করা হচ্ছে (শুধু ফ্রেশ ও চালু লিংক নেওয়া হবে)...")
+        print(f"⚡ {len(unique_stream_items)} টি ইউনিক স্ট্রিম প্রসেস করা হচ্ছে (BDIX সংরক্ষিত + International লাইভ চেক)...")
         fresh_channels = []
         with ThreadPoolExecutor(max_workers=80) as executor:
             futures = [executor.submit(check_single_stream, item) for item in unique_stream_items]
@@ -395,7 +410,6 @@ def step2_build_fresh_final_playlist():
         print(f"⏭️ স্ট্রিম চেক স্কিপ করে {len(unique_stream_items)} টি ইউনিক স্ট্রিম নেওয়া হচ্ছে...")
         fresh_channels = unique_stream_items
 
-    # ক্যাটাগরি ও নাম অনুযায়ী সাজানো
     fresh_channels.sort(key=lambda x: (x[1], x[0]["name"].lower(), x[2]))
 
     total_count = len(fresh_channels)
@@ -435,7 +449,7 @@ def step2_build_fresh_final_playlist():
 
     print(f"\n✅ ফাইনাল প্লেলিস্ট তৈরি সম্পন্ন!")
     print(f"📄 কালেক্টেড ফাইল: {COLLECTED_M3U_FILE} ({len(collected_channels)} টি)")
-    print(f"📄 ফাইনাল ফ্রেশ ফাইল: {FINAL_M3U_FILE} ও {FINAL_JSON_FILE} ({total_count} টি ফ্রেশ চ্যানেল)")
+    print(f"📄 ফাইনাল ফাইল: {FINAL_M3U_FILE} ও {FINAL_JSON_FILE} ({total_count} টি)")
 
 def main():
     count = step1_collect_all_keyword_channels()
