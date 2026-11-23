@@ -5,7 +5,7 @@ import time
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-MY_NAME = "Ireen Store"
+MY_NAME = "Ahmed Store"
 
 COLLECTED_M3U_FILE = "collected_playlist.m3u"
 FINAL_M3U_FILE = "playlist.m3u"
@@ -42,12 +42,12 @@ EXCLUDED_WORDS = [
 ]
 
 # ==============================================================================
-# ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট
+# ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট (সঠিক ক্যাটাগরি অনুযায়ী সাজানো)
 # ==============================================================================
 KEYWORD_CATEGORIES = [
     {
         "priority": 1,
-        "group": "Bangla",
+        "group": "Bangla TV",
         "keywords": [
             # বাংলাদেশের জাতীয়, নিউজ, বিনোদন ও সব চ্যানেল
             'btv', 'bangladesh television', 'btv world', 'btv chattogram', 'btv news',
@@ -104,7 +104,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 4,
-        "group": "Hindi Movie",
+        "group": "Indian Movie Channels",
         "keywords": [
             'star gold', 'sony max', 'sony wah', 'zee cinema', 'zee classic',
             'zee action', 'zee bollywood', 'zee anmol cinema', 'and pictures', '&pictures',
@@ -119,16 +119,27 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 5,
-        "group": "Movie",
+        "group": "English Movie Channels",
         "keywords": [
-            'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
-            'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
+            # ইন্ডিয়া ও এশিয়ার জনপ্রিয় ইংলিশ মুভি চ্যানেল
+            'star movies', 'star movies select', 'sony pix', 'movies now', 'mnx',
+            '&flix', 'andflix', '&prive', 'andprive', 'romedy now', 'wb', 'zee studio',
+            'fox movies', 'fox action movies', 'fox family movies', 'axn',
+            # ইউএসএ, ইউকে ও ইন্টারন্যাশনাল জনপ্রিয় ইংলিশ মুভি চ্যানেল
+            'hbo', 'cinemax', 'showtime', 'starz', 'paramount', 'paramount network',
+            'sky cinema', 'sky movies', 'film4', 'amc', 'tcm', 'turner classic movies',
+            'mgm', 'tnt', 'tbs', 'fx', 'fxm', 'fx movies', 'syfy', 'hallmark',
+            'lifetime movies', 'ifc', 'sundance', 'sony movies', 'great movies',
+            'movies4men', 'talking pictures', 'filmbox', 'studio universal', 'universal tv',
+            'cinema world',
+            # মিডল-ইস্ট ও গ্লোবাল পপুলার ইংলিশ মুভি চ্যানেল
+            'mbc 2', 'mbc2', 'mbc max', 'mbc action', 'osn movies', 'bein movies', 'dubai one'
         ],
         "exclude": []
     },
     {
         "priority": 6,
-        "group": "Hindi",
+        "group": "Indian Entertainment",
         "keywords": [
             'star plus', 'star bharat', 'star utsav', 'life ok',
             'sony tv', 'sony entertainment', 'sony set', 'set india', 'set hd', 'set asia',
@@ -143,7 +154,7 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 7,
-        "group": "Kids",
+        "group": "Kids Channels",
         "keywords": [
             'hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork',
             'sonic', 'nickelodeon', 'nick', 'disney'
@@ -155,13 +166,13 @@ KEYWORD_CATEGORIES = [
         "group": "Documentary & Info",
         "keywords": [
             'discovery', 'national geographic', 'nat geo', 'natgeo',
-            'animal planet', 'history tv', 'history channel', 'planet earth'
+            'animal planet', 'history tv', 'history tv18', 'history channel', 'planet earth'
         ],
         "exclude": []
     },
     {
         "priority": 9,
-        "group": "Music",
+        "group": "Music Channels",
         "keywords": [
             '9xm', '9x jalwa', '9x tashan', '9x jhakaas', 'mastiii', 'masti tv',
             'zing', 'zoom', 'b4u music', 'mtv', 'mtv beats', 'mtv hits', 'mtv live',
@@ -203,19 +214,30 @@ def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
     if not kw_tokens:
         return False
 
+    # এক শব্দের কিওয়ার্ড: শব্দের শুরু থেকে ম্যাচ করবে (মাঝখান থেকে ভুল ম্যাচ করবে না)
     if len(kw_tokens) == 1:
         tok = kw_tokens[0]
         if len(tok) <= 4:
-            pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd|tv)*\b'
+            pattern = rf'\b{re.escape(tok)}(?:\d+|hd|sd|fhd|uhd|tv)*\b' if len(tok) >= 2 else rf'\b{re.escape(tok)}\b'
             return re.search(pattern, clean_space_name) is not None
-        return tok in norm_name
+        pattern = rf'\b{re.escape(tok)}[a-z0-9]*\b'
+        return re.search(pattern, clean_space_name) is not None
 
+    # একাধিক শব্দের কিওয়ার্ড:
+    # ১) স্পেস ছাড়া পূর্ণ শব্দ হিসেবে ম্যাচ (যেমন: "StarPlus", "TSports", "Channel24")
+    #    কিন্তু "Star Plus" এর সাথে "r plus" ("rplus") ভুল করে ম্যাচ করবে না!
     kw_joined = ''.join(kw_tokens)
-    if len(kw_joined) >= 5 and kw_joined in norm_name:
-        return True
+    if len(kw_joined) >= 5:
+        joined_pattern = rf'\b{re.escape(kw_joined)}(?:\d+|hd|sd|fhd|uhd|tv)*\b'
+        if re.search(joined_pattern, clean_space_name):
+            return True
 
+    # ২) কিওয়ার্ডের প্রতিটি শব্দ আলাদাভাবে চ্যানেলের নামে থাকলে ম্যাচ করবে
     for tok in kw_tokens:
-        pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd|tv)*\b'
+        if len(tok) == 1:
+            pattern = rf'\b{re.escape(tok)}\b'
+        else:
+            pattern = rf'\b{re.escape(tok)}(?:\d+|hd|sd|fhd|uhd|tv)*\b'
         if not re.search(pattern, clean_space_name):
             return False
     return True
