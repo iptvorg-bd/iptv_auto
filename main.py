@@ -19,7 +19,7 @@ SKIP_CHECK_FOR_BDIX = True
 # ==============================================================================
 CUSTOM_PLAYLISTS = [
     "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # প্লেলিস্ট ১
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ২
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # কাস্টম প্লেলিস্ট ২
     "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/new_isp.m3u",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
