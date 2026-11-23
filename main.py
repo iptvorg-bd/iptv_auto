@@ -4,7 +4,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MY_NAME = "Ireen Tv"
-MAX_TOTAL_CHANNELS = 000
+MAX_TOTAL_CHANNELS = 2000
 
 # এখানে আপনার কাস্টম প্লেলিস্টের URL গুলো বসান (খালি রাখলে সমস্যা নেই, অটোমেটিক স্কিপ করবে)
 CUSTOM_PLAYLISTS = [
