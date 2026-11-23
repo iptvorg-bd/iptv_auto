@@ -9,8 +9,8 @@ MAX_TOTAL_CHANNELS = 000
 # এখানে আপনার কাস্টম প্লেলিস্টের URL গুলো বসান (খালি রাখলে সমস্যা নেই, অটোমেটিক স্কিপ করবে)
 CUSTOM_PLAYLISTS = [
     "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",
-    "",  # কাস্টম প্লেলিস্ট ১ (উদাহরণ: "https://example.com/playlist1.m3u")
-    "",  # কাস্টম প্লেলিস্ট ২
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ১ (উদাহরণ: "https://example.com/playlist1.m3u")
+    "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # কাস্টম প্লেলিস্ট ২
     "",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
