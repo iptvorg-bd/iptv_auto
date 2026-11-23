@@ -1,29 +1,26 @@
 import requests
 import json
 import re
+import time
+import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MY_NAME = "Ahmed Store"
 
-# ফাইলগুলোর নাম
-COLLECTED_M3U_FILE = "collected_playlist.m3u"  # ধাপ ১: সব প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল (BDIX + International) এখানে জমা হবে
-FINAL_M3U_FILE = "playlist.m3u"                # ধাপ ২: ডুপ্লিকেট URL বাদ দিয়ে ফ্রেশ ও BDIX সার্ভারসহ ফাইনাল প্লেলিস্ট
+COLLECTED_M3U_FILE = "collected_playlist.m3u"
+FINAL_M3U_FILE = "playlist.m3u"
 FINAL_JSON_FILE = "playlist.json"
 
-# True রাখলে ইন্টারন্যাশনাল স্ট্রিমগুলো লাইভ চেক করে শুধু চালু লিংক নেবে।
 CHECK_STREAM_ALIVE = True
-
-# True রাখলে GitHub Actions (বিদেশি সার্ভার) থেকে রান করলেও BDIX / বাংলাদেশের লোকাল সার্ভারগুলো বাদ পড়বে না।
-# (আপনি যদি নিজের বাংলাদেশের পিসি/ওয়াইফাই থেকে চালান এবং BDIX-ও লাইভ চেক করতে চান, তবে এটি False করতে পারেন)
 SKIP_CHECK_FOR_BDIX = True
 
 # ==============================================================================
 # ১. কাস্টম প্লেলিস্টের URL গুলো এখানে বসান (খালি স্লট অটোমেটিক স্কিপ করবে)
 # ==============================================================================
 CUSTOM_PLAYLISTS = [
-    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
-    "",  # কাস্টম প্লেলিস্ট ২
-    "",  # কাস্টম প্লেলিস্ট ৩
+    "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # প্লেলিস্ট ১
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ২
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/new_isp.m3u",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
     "",  # কাস্টম প্লেলিস্ট ৬
@@ -36,7 +33,6 @@ CUSTOM_PLAYLISTS = [
 
 # ==============================================================================
 # ২. যে শব্দগুলো চ্যানেলের নাম বা গ্রুপে থাকলে চ্যানেলটি বাদ যাবে
-#    (BDIX প্লেলিস্টের চ্যানেল যেন বাদ না পড়ে সেজন্য 'local' ও 'cable' সরানো হয়েছে)
 # ==============================================================================
 EXCLUDED_WORDS = [
     'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
@@ -46,7 +42,7 @@ EXCLUDED_WORDS = [
 ]
 
 # ==============================================================================
-# ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট (ভবিষ্যতে এখান থেকেই কিওয়ার্ড বাড়াতে/কমাতে/বদলাতে পারবেন)
+# ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট
 # ==============================================================================
 KEYWORD_CATEGORIES = [
     {
@@ -212,12 +208,57 @@ def categorize_and_prioritize(channel):
     return None
 
 def is_bdix_or_local_url(url):
-    """BDIX বা বাংলাদেশের লোকাল সার্ভার লিংক চেনার জন্য"""
     lower_url = url.lower()
     if re.match(r'^https?://(10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|103\.)', lower_url):
         return True
     bdix_markers = ['bdix', 'ftpbd', 'aynaott', 'jagobd', 'bdiptv', '.com.bd', '.net.bd', '.org.bd']
     return any(marker in lower_url for marker in bdix_markers)
+
+def fetch_playlist_content(url, playlist_idx):
+    """503 বা নেটওয়ার্ক সমস্যা হলে রিট্রাই এবং curl ব্যাকআপ দিয়ে প্লেলিস্ট ফেচ করে"""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache"
+    }
+
+    last_status = None
+
+    # ১) requests দিয়ে ৩ বার রিট্রাই
+    for attempt in range(1, 4):
+        try:
+            response = requests.get(url, headers=headers, timeout=20, allow_redirects=True)
+            last_status = response.status_code
+            if response.status_code == 200 and "#EXTINF" in response.text:
+                return response.text
+            if response.status_code in (429, 500, 502, 503, 504):
+                print(f"⏳ প্লেলিস্ট #{playlist_idx} Status {response.status_code} দিয়েছে, আবার চেষ্টা করা হচ্ছে ({attempt}/3)...")
+                time.sleep(attempt * 2)
+                continue
+            break
+        except Exception as e:
+            if attempt == 3:
+                print(f"⚠️ প্লেলিস্ট #{playlist_idx} requests এরর: {e}")
+            time.sleep(attempt * 2)
+
+    # ২) ব্যাকআপ হিসেবে curl ব্যবহার (অনেক সার্ভার Python requests ব্লক করলে curl-এ কাজ করে)
+    try:
+        result = subprocess.run(
+            ["curl", "-sSL", "--retry", "2", "--max-time", "20", "-A", headers["User-Agent"], url],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="ignore"
+        )
+        if result.returncode == 0 and "#EXTINF" in result.stdout:
+            print(f"✅ প্লেলিস্ট #{playlist_idx} curl ব্যাকআপ দিয়ে সফলভাবে লোড হয়েছে!")
+            return result.stdout
+    except Exception:
+        pass
+
+    print(f"⚠️ প্লেলিস্ট #{playlist_idx} লোড হয়নি (Status: {last_status})")
+    return None
 
 def parse_m3u_text(raw_data):
     channels = []
@@ -287,12 +328,11 @@ def check_single_stream(item):
     ch_obj, priority, order_idx = item
     url = ch_obj['stream_url']
 
-    # BDIX / লোকাল বাংলাদেশি সার্ভার হলে (এবং SKIP_CHECK_FOR_BDIX = True হলে) সরাসরি পাস করবে
     if SKIP_CHECK_FOR_BDIX and is_bdix_or_local_url(url):
         return item
 
     headers = {
-        "User-Agent": ch_obj.get("user_agent") or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        "User-Agent": ch_obj.get("user_agent") or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     }
     if ch_obj.get("referer"):
         headers["Referer"] = ch_obj["referer"]
@@ -311,7 +351,6 @@ def check_single_stream(item):
     return None
 
 def step1_collect_all_keyword_channels():
-    """ধাপ ১: সব প্লেলিস্ট থেকে BDIX ও International সব কিওয়ার্ড চ্যানেল collected_playlist.m3u তে জমা করবে"""
     sources = []
     for idx, custom_url in enumerate(CUSTOM_PLAYLISTS, start=1):
         clean_url = custom_url.strip()
@@ -322,23 +361,13 @@ def step1_collect_all_keyword_channels():
         print("⚠️ কোনো বৈধ কাস্টম প্লেলিস্ট URL পাওয়া যায়নি!")
         return 0
 
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-
     print(f"🔄 [ধাপ ১] মোট {len(sources)} টি প্লেলিস্ট থেকে কিওয়ার্ডের সব চ্যানেল (BDIX + International) কালেক্ট করা হচ্ছে...")
 
     all_collected = []
 
     for url, playlist_idx in sources:
-        try:
-            response = requests.get(url, headers=headers, timeout=15)
-            if response.status_code != 200:
-                print(f"⚠️ প্লেলিস্ট #{playlist_idx} লোড হয়নি (Status: {response.status_code})")
-                continue
-            raw_data = response.text
-        except Exception as e:
-            print(f"⚠️ প্লেলিস্ট #{playlist_idx} এরর: {e}")
+        raw_data = fetch_playlist_content(url, playlist_idx)
+        if not raw_data:
             continue
 
         parsed_channels = parse_m3u_text(raw_data)
@@ -355,6 +384,10 @@ def step1_collect_all_keyword_channels():
 
         print(f"📥 প্লেলিস্ট #{playlist_idx} থেকে {matched_count} টি কিওয়ার্ড-ম্যাচড চ্যানেল কালেক্ট হয়েছে।")
 
+    if not all_collected:
+        print("⚠️ কোনো চ্যানেল কালেক্ট হয়নি! আগের ফাইলগুলো অক্ষত রাখা হলো।")
+        return 0
+
     m3u_lines = [f'#EXTM3U name="{MY_NAME} Collected | Total: {len(all_collected)}"\n\n']
     for ch in all_collected:
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{ch["group"]}",{ch["name"]}\n')
@@ -369,7 +402,6 @@ def step1_collect_all_keyword_channels():
     return len(all_collected)
 
 def step2_build_fresh_final_playlist():
-    """ধাপ ২: collected_playlist.m3u থেকে ডুপ্লিকেট স্ট্রিম বাদ দিয়ে ফাইনাল ফ্রেশ প্লেলিস্ট তৈরি করবে"""
     try:
         with open(COLLECTED_M3U_FILE, "r", encoding="utf-8") as cf:
             collected_raw = cf.read()
