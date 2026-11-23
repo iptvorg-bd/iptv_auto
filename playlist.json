@@ -825,6 +825,12 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/8.m3u8"
         },
         {
+            "name": "T SPORTS",
+            "logo": "https://i.postimg.cc/PfWvcMyz/T-Sports2.png",
+            "group": "Sports",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/10.m3u8"
+        },
+        {
             "name": "T Sports HD",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/t_sports_hd.svg",
             "group": "Sports",
@@ -833,12 +839,6 @@
         {
             "name": "T Sports HD",
             "logo": "https://i.postimg.cc/VL5yTtwr/20250707-141739.png",
-            "group": "Sports",
-            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/10.m3u8"
-        },
-        {
-            "name": "T SPORTS HD",
-            "logo": "https://i.postimg.cc/j24W7sCV/T-Sports.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/11.m3u8"
         },
