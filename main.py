@@ -5,7 +5,7 @@ import time
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-MY_NAME = "Ahmed Store"
+MY_NAME = "Ireen Store"
 
 COLLECTED_M3U_FILE = "collected_playlist.m3u"
 FINAL_M3U_FILE = "playlist.m3u"
