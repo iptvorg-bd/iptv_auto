@@ -5,10 +5,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 MY_NAME = "Ahmed Store"
 
-# এখানে আপনার কাস্টম প্লেলিস্টের URL গুলো বসান
-# প্রথমে ১ নম্বর প্লেলিস্ট ফিল্টার হবে, এরপর বাকি প্লেলিস্টগুলো ফিল্টার হয়ে কম্বাইন হবে (খালি স্লট অটোমেটিক স্কিপ করবে)
+# ==============================================================================
+# ১. কাস্টম প্লেলিস্টের URL গুলো এখানে বসান (খালি স্লট অটোমেটিক স্কিপ করবে)
+#    ১ নম্বর থেকে শুরু করে সব প্লেলিস্ট থেকেই চ্যানেল কালেক্ট করে কম্বাইন করা হবে
+# ==============================================================================
 CUSTOM_PLAYLISTS = [
-    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১ (প্রধান)
+    "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
     "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/Combined_Live_TV.m3u",  # কাস্টম প্লেলিস্ট ২ (উদাহরণ: "https://example.com/playlist2.m3u")
     "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # কাস্টম প্লেলিস্ট ৩
     "",  # কাস্টম প্লেলিস্ট ৪
@@ -21,6 +23,122 @@ CUSTOM_PLAYLISTS = [
     "",  # কাস্টম প্লেলিস্ট ১১
 ]
 
+# ==============================================================================
+# ২. যে শব্দগুলো চ্যানেলের নাম বা গ্রুপে থাকলে চ্যানেলটি বাদ যাবে (চাইলে পরিবর্তন করতে পারেন)
+# ==============================================================================
+EXCLUDED_WORDS = [
+    'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
+    'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample',
+    'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm',
+    'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto'
+]
+
+# ==============================================================================
+# ৩. ক্যাটাগরি ও কিওয়ার্ড লিস্ট (ভবিষ্যতে এখান থেকেই কিওয়ার্ড বাড়াতে/কমাতে/বদলাতে পারবেন)
+#    সতর্কতা: কিওয়ার্ড বড়/ছোট হাতের অক্ষর যেভাবেই লেখেন সমস্যা নেই, তবে বাইরের কোনো চ্যানেল ঢুকবে না।
+# ==============================================================================
+KEYWORD_CATEGORIES = [
+    {
+        "priority": 1,
+        "group": "Bangladeshi TV",
+        "keywords": [
+            'somoy', 'jamuna', 'ekattor', 'independent', 'channel 24', 'channel24',
+            'dbc news', 'news 24', 'news24', 'ekushey', 'ntv', 'rtv', 'atn bangla',
+            'atn news', 'banglavision', 'boishakhi', 'desh tv', 'maasranga', 'channel i',
+            'deepto', 'btv', 'bangladesh television', 'nagorik', 'mohona', 'asian tv',
+            'sa tv', 'satv', 'bijoy tv', 'ananda tv', 'nexus tv', 'duronto', 'mytv',
+            'gaan bangla', 'global tv', 'ekhon', 'green tv', 'channel s', 'channel 9',
+            'bangla tv', 'sangbad'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 2,
+        "group": "Sports Channels",
+        "keywords": [
+            't sports', 'tsports', 'gazi tv', 'gtv', 'star sports', 'sony sports',
+            'sony ten', 'sony teen', 'ten sports', 'sports18', 'sports 18', 'willow',
+            'ptv sports', 'dd sports', 'astrosports', 'bein sports', 'supersport',
+            'sky sports', 'eurosport'
+        ],
+        "exclude": ['golf', 'racing', 'poker', 'outdoor', 'hunt', 'fight', 'ufc', 'billiards', 'darts']
+    },
+    {
+        "priority": 3,
+        "group": "Islamic TV",
+        "keywords": [
+            'islam', 'quran', 'madani', 'peace tv', 'makkah', 'madinah', 'sunnah', 'alhuda', 'iqra'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 4,
+        "group": "Indian Movie Channels",
+        "keywords": [
+            'star gold', 'sony max', 'zee cinema', 'and pictures', '&pictures',
+            'goldmines', 'b4u movies', 'colors cineplex', 'zee classic', 'zee action',
+            'rishtey cineplex'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 5,
+        "group": "English Movie Channels",
+        "keywords": [
+            'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
+            'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 6,
+        "group": "Kolkata Bangla",
+        "keywords": [
+            'star jalsha', 'star jalsha movies', 'zee bangla', 'zee bangla cinema', 'colors bangla',
+            'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla',
+            'news18 bangla', 'tv9 bangla', 'aakash aath'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 7,
+        "group": "Kids Channels",
+        "keywords": [
+            'hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork',
+            'sonic', 'nickelodeon', 'nick', 'disney'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 8,
+        "group": "Documentary & Info",
+        "keywords": [
+            'discovery', 'national geographic', 'nat geo', 'natgeo',
+            'animal planet', 'history tv', 'history channel', 'planet earth'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 9,
+        "group": "Music Channels",
+        "keywords": [
+            'mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla'
+        ],
+        "exclude": []
+    },
+    {
+        "priority": 10,
+        "group": "International News",
+        "keywords": [
+            'bbc news', 'bbc world news', 'cnn', 'cnn international', 'al jazeera',
+            'al jazeera english', 'aaj tak', 'ndtv india', 'ndtv 24x7', 'india today',
+            'dw news', 'france 24'
+        ],
+        "exclude": []
+    }
+]
+
+
 def clean_channel_name(name):
     cleaned = re.sub(r'[\(\[\{].*?[\)\]\}]', '', name)
     return cleaned.strip()
@@ -28,18 +146,51 @@ def clean_channel_name(name):
 def normalize_text(text):
     return re.sub(r'[^a-zA-Z0-9]', '', text).lower()
 
-def is_excluded_channel(channel):
-    name = channel['name'].lower()
-    group = channel['group'].lower()
-    
-    excluded = [
-        'telugu', 'tamil', 'kannada', 'malayalam', 'marathi', 'gujarati', 'punjabi', 'oriya', 'odia',
-        'gemini', 'vijay', 'sun tv', 'kalignar', 'etv', 'sakshi', 'test', 'dummy', 'promo', 'sample', 
-        'shopping', 'teleshopping', 'home shop', 'local', 'cable', 'radio', 'fm',
-        'latin', 'latam', 'brazil', 'mexico', 'spanish', 'portuguese', 'pluto'
-    ]
-    if any(k in group for k in excluded) or any(k in name for k in excluded):
+def match_keyword(raw_lower_name, clean_space_name, norm_name, keyword):
+    # '&pictures' বা '&flix' এর মতো '&' যুক্ত কিওয়ার্ড নিখুঁতভাবে ম্যাচ করার জন্য
+    if '&' in keyword:
+        kw_compact = re.sub(r'\s+', '', keyword.lower())
+        name_compact = re.sub(r'\s+', '', raw_lower_name)
+        return kw_compact in name_compact
+
+    kw_tokens = re.findall(r'[a-z0-9]+', keyword.lower())
+    if not kw_tokens:
+        return False
+
+    # এক শব্দের কিওয়ার্ড হলে
+    if len(kw_tokens) == 1:
+        tok = kw_tokens[0]
+        if len(tok) <= 4:
+            # ছোট শব্দ (যেমন: ntv, rtv, gtv, wb, hbo) পূর্ণ শব্দ হিসেবে ম্যাচ করবে
+            pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
+            return re.search(pattern, clean_space_name) is not None
+        return tok in norm_name
+
+    # একাধিক শব্দের কিওয়ার্ড হলে (যেমন: "sony sports", "sony teen", "star sports"):
+    # ১) স্পেস ছাড়া একসাথে ম্যাচ (যেমন: "SonySportsHD", "TSports")
+    kw_joined = ''.join(kw_tokens)
+    if len(kw_joined) >= 5 and kw_joined in norm_name:
         return True
+
+    # ২) কিওয়ার্ডের প্রতিটি শব্দ চ্যানেলের নামের যেকোনো জায়গায় থাকলে ম্যাচ করবে
+    # (যেমন: "sony sports" ম্যাচ করবে "Sony sports", "Sony Teen Sports", "SONY SPORTS TEEN" সবগুলোতে)
+    for tok in kw_tokens:
+        pattern = rf'\b{re.escape(tok)}(?:hd|sd|fhd|uhd)?\b'
+        if not re.search(pattern, clean_space_name):
+            return False
+    return True
+
+def is_excluded_channel(channel):
+    name_space = re.sub(r'[^a-zA-Z0-9]+', ' ', channel['name']).strip().lower()
+    group_space = re.sub(r'[^a-zA-Z0-9]+', ' ', channel['group']).strip().lower()
+
+    for word in EXCLUDED_WORDS:
+        w_space = re.sub(r'[^a-zA-Z0-9]+', ' ', word).strip().lower()
+        if not w_space:
+            continue
+        pattern = rf'\b{re.escape(w_space)}\b'
+        if re.search(pattern, name_space) or re.search(pattern, group_space):
+            return True
     return False
 
 def check_single_stream(item):
@@ -63,97 +214,20 @@ def check_single_stream(item):
     return None
 
 def categorize_and_prioritize(channel):
-    name = channel['name'].lower()
-    norm_name = normalize_text(name)
+    raw_lower_name = channel['name'].lower()
+    clean_space_name = re.sub(r'[^a-z0-9]+', ' ', raw_lower_name).strip()
+    norm_name = normalize_text(raw_lower_name)
 
-    # শুধুমাত্র নিচের কিওয়ার্ডগুলো ম্যাচ করলে ফিল্টার হবে, বাকি সব বাদ পড়বে
+    for cat in KEYWORD_CATEGORIES:
+        if any(match_keyword(raw_lower_name, clean_space_name, norm_name, ex) for ex in cat.get("exclude", [])):
+            continue
 
-    # ১. Bangladeshi TV
-    bd_keywords = [
-        'somoy', 'jamuna', 'ekattor', 'independent', 'channel 24', 'channel24',
-        'dbc news', 'news 24', 'news24', 'ekushey', 'ntv', 'rtv', 'atn bangla',
-        'atn news', 'banglavision', 'boishakhi', 'desh tv', 'maasranga', 'channel i',
-        'deepto', 'btv', 'bangladesh television', 'nagorik', 'mohona', 'asian tv',
-        'sa tv', 'satv', 'bijoy tv', 'ananda tv', 'nexus tv', 'duronto', 'mytv',
-        'gaan bangla', 'global tv', 'ekhon', 'green tv', 'channel s', 'channel 9',
-        'bangla tv', 'sangbad'
-    ]
-    if any(normalize_text(bd) in norm_name for bd in bd_keywords):
-        return (1, 0, "Bangladeshi TV")
-
-    # ২. Sports Channels
-    sports_keywords = [
-        't sports', 'tsports', 'gazi tv', 'gtv', 'star sports', 'sony sports', 
-        'sony ten', 'ten sports', 'sports18', 'sports 18', 'willow', 'ptv sports', 
-        'dd sports', 'astrosports', 'bein sports', 'supersport', 'sky sports', 'eurosport'
-    ]
-    unwanted_sports = ['golf', 'racing', 'poker', 'outdoor', 'hunt', 'fight', 'ufc', 'billiards', 'darts']
-    
-    if not any(un_sp in norm_name for un_sp in unwanted_sports):
-        if any(normalize_text(sp) in norm_name for sp in sports_keywords):
-            return (2, 0, "Sports Channels")
-
-    # ৩. Islamic TV
-    islamic_keywords = ['islam', 'quran', 'madani', 'peace tv', 'makkah', 'madinah', 'sunnah', 'alhuda', 'iqra']
-    if any(normalize_text(k) in norm_name for k in islamic_keywords):
-        return (3, 0, "Islamic TV")
-
-    # ৪. Indian Movie Channels
-    indian_movies = [
-        'star gold', 'sony max', 'zee cinema', 'and pictures', '&pictures',
-        'goldmines', 'b4u movies', 'colors cineplex', 'zee classic', 'zee action',
-        'rishtey cineplex'
-    ]
-    if any(normalize_text(m) in norm_name for m in indian_movies):
-        return (4, 0, "Indian Movie Channels")
-
-    # ৫. English Movie Channels
-    english_movies = [
-        'hbo', 'star movies', 'sony pix', 'movies now', '&flix', 'andflix',
-        'mnx', 'wb', 'paramount', 'cinemax', 'sky cinema', 'film4', 'amc'
-    ]
-    if any(normalize_text(em) in norm_name for em in english_movies):
-        return (5, 0, "English Movie Channels")
-
-    # ৬. Kolkata Bangla
-    kolkata_popular = [
-        'star jalsha', 'star jalsha movies', 'zee bangla', 'zee bangla cinema', 'colors bangla', 
-        'abp ananda', 'sony aath', 'sangeet bangla', 'zee 24 ghanta', 'enterr10 bangla', 
-        'news18 bangla', 'tv9 bangla', 'aakash aath'
-    ]
-    if any(normalize_text(k) in norm_name for k in kolkata_popular):
-        return (6, 0, "Kolkata Bangla")
-
-    # ৭. Kids Channels
-    kids_keywords = ['hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork', 'sonic', 'nickelodeon', 'nick', 'disney']
-    if any(normalize_text(k) in norm_name for k in kids_keywords):
-        return (7, 0, "Kids Channels")
-
-    # ৮. Documentary & Info
-    doc_popular_keywords = [
-        'discovery', 'national geographic', 'nat geo', 'natgeo', 
-        'animal planet', 'history tv', 'history channel', 'planet earth'
-    ]
-    if any(normalize_text(k) in norm_name for k in doc_popular_keywords):
-        return (8, 0, "Documentary & Info")
-
-    # ৯. Music Channels
-    music_keywords = ['mnet', 'mtv', '9xm', 'zoom', 'b4u music', 'sangeet bangla']
-    if any(normalize_text(k) in norm_name for k in music_keywords):
-        return (9, 0, "Music Channels")
-
-    # ১০. International News
-    global_news = [
-        'bbc news', 'bbc world news', 'cnn', 'cnn international', 'al jazeera', 
-        'al jazeera english', 'aaj tak', 'ndtv india', 'ndtv 24x7', 'india today', 'dw news', 'france 24'
-    ]
-    if any(normalize_text(news) in norm_name for news in global_news):
-        return (10, 0, "International News")
+        if any(match_keyword(raw_lower_name, clean_space_name, norm_name, kw) for kw in cat["keywords"]):
+            return (cat["priority"], 0, cat["group"])
 
     return None
 
 def fetch_channels_by_group():
-    # শুধুমাত্র CUSTOM_PLAYLISTS থেকেই সোর্স নেওয়া হবে (ক্রমানুসারে ১ নম্বর থেকে শুরু করে বাকিগুলো)
     sources = []
     for idx, custom_url in enumerate(CUSTOM_PLAYLISTS, start=1):
         clean_url = custom_url.strip()
@@ -168,10 +242,10 @@ def fetch_channels_by_group():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print(f"🔄 মোট {len(sources)} টি কাস্টম প্লেলিস্ট থেকে কিওয়ার্ড অনুযায়ী চ্যানেল ফিল্টার করা হচ্ছে...")
+    print(f"🔄 মোট {len(sources)} টি কাস্টম প্লেলিস্ট থেকে কিওয়ার্ড অনুযায়ী চ্যানেল কালেক্ট করা হচ্ছে...")
 
     candidate_channels = []
-    seen_urls = set()  # শুধুমাত্র ডুপ্লিকেট stream_url আটকাবে, একই নামের ভিন্ন URL রাখবে
+    seen_urls = set()  # শুধুমাত্র ডুপ্লিকেট stream_url বাদ দেবে, একই নামের ভিন্ন URL সবগুলো নেবে
 
     for url, playlist_idx in sources:
         try:
@@ -187,6 +261,8 @@ def fetch_channels_by_group():
         lines = raw_data.splitlines()
         i = 0
         channel_order = 0
+        matched_in_this_playlist = 0
+
         while i < len(lines):
             line = lines[i].strip()
             if line.startswith("#EXTINF:"):
@@ -207,7 +283,6 @@ def fetch_channels_by_group():
                         break
                     j += 1
 
-                # একই stream_url দুইবার না আসার জন্য seen_urls চেক (নাম এক হলেও URL ভিন্ন হলে নেবে)
                 if stream_url and stream_url not in seen_urls:
                     raw_name = info_line.split(",")[-1].strip() if "," in info_line else "Unknown Channel"
                     clean_name = clean_channel_name(raw_name)
@@ -229,11 +304,14 @@ def fetch_channels_by_group():
                         res = categorize_and_prioritize(ch_obj)
                         if res is not None:
                             channel_order += 1
+                            matched_in_this_playlist += 1
                             candidate_channels.append((ch_obj, res, playlist_idx, channel_order))
                             seen_urls.add(stream_url)
             i += 1
 
-    print(f"⚡ {len(candidate_channels)} টি কিওয়ার্ড-ম্যাচড চ্যানেল পাওয়া গেছে। স্ট্রিম টেস্ট চলছে...")
+        print(f"📥 প্লেলিস্ট #{playlist_idx} থেকে {matched_in_this_playlist} টি নতুন কিওয়ার্ড-ম্যাচড চ্যানেল পাওয়া গেছে।")
+
+    print(f"\n⚡ সর্বমোট {len(candidate_channels)} টি ইউনিক স্ট্রিম চেক করা হচ্ছে...")
 
     working_channels = []
     
@@ -244,18 +322,15 @@ def fetch_channels_by_group():
             if result:
                 working_channels.append(result)
 
-    # ক্যাটাগরি ও নাম অনুযায়ী সাজানো (একই নামের চ্যানেলের ক্ষেত্রে ১ নম্বর প্লেলিস্টের লিংক আগে থাকবে)
     working_channels.sort(key=lambda x: (x[1][0], x[0]['name'].lower(), x[2], x[3]))
 
-    # কোনো MAX লিমিট নেই — সবগুলো কার্যকর চ্যানেলই রাখা হবে
-    final_selected_channels = working_channels
-    total_count = len(final_selected_channels)
+    total_count = len(working_channels)
 
     m3u_header = f'#EXTM3U name="{MY_NAME} IPTV | Total Channels: {total_count}"\n\n'
     m3u_lines = [m3u_header]
     json_channels = []
 
-    for ch, res, _, _ in final_selected_channels:
+    for ch, res, _, _ in working_channels:
         p, sub_p, display_group = res
 
         m3u_lines.append(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" group-title="{display_group}",{ch["name"]}\n{ch["stream_url"]}\n')
