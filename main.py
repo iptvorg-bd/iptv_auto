@@ -71,12 +71,26 @@ KEYWORD_CATEGORIES = [
     },
     {
         "priority": 2,
-        "group": "Sports",
+        "group": "Sports Channels",
         "keywords": [
-            't sports', 'tsports', 'gazi tv', 'gtv', 'star sports', 'sony sports',
-            'sony ten', 'sony teen', 'ten sports', 'sports18', 'sports 18', 'willow',
-            'ptv sports', 'dd sports', 'astrosports', 'bein sports', 'supersport',
-            'sky sports', 'eurosport'
+            # বাংলাদেশ, ইন্ডিয়া ও সাবকন্টিনেন্টের সব জনপ্রিয় স্পোর্টস চ্যানেল
+            't sports', 'tsports', 'gazi tv', 'gtv',
+            'star sports', 'star cricket', 'sony sports', 'sony ten', 'sony teen',
+            'sony six', 'sony espn', 'ten sports', 'ten cricket', 'sports18', 'sports 18',
+            'dd sports', 'fancode', 'willow', 'criclife', 'cricbuzz',
+            'ptv sports', 'geo super', 'a sports hd', 'asports',
+            # মধ্যপ্রাচ্য ও এশিয়ার জনপ্রিয় স্পোর্টস চ্যানেল
+            'bein sports', 'bein sport', 'astrosports', 'astro cricket', 'astro supersport',
+            'astro arena', 'ssc sports', 'ssc 1', 'ssc 2', 'ssc 3', 'ssc 4', 'ssc 5',
+            'ssc extra', 'abu dhabi sports', 'ad sports', 'dubai sports', 'alkass', 'sharjah sports',
+            # ইউরোপ, ইউকে, আমেরিকা ও গ্লোবাল ইন্টারন্যাশনাল স্পোর্টস চ্যানেল
+            'sky sports', 'sky sport', 'tnt sports', 'tnt sport', 'bt sports', 'bt sport',
+            'eurosport', 'premier sports', 'viaplay sports', 'setanta sports',
+            'supersport', 'super sport', 'espn', 'fox sports', 'fox sport', 'fox cricket',
+            'cbs sports', 'nbc sports', 'tsn', 'sportsnet', 'dazn',
+            'arena sport', 'arena sports', 'eleven sports', 'nova sports', 'sportklub',
+            'nba tv', 'nfl network', 'mlb network', 'nhl network', 'mutv', 'lfctv',
+            'real madrid tv', 'barca tv', 'formula 1', 'motogp', 'olympic channel'
         ],
         "exclude": ['golf', 'racing', 'poker', 'outdoor', 'hunt', 'fight', 'ufc', 'billiards', 'darts']
     },
