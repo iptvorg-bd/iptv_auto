@@ -1,6 +1,6 @@
 {
-    "playlist_name": "Ahmed Store",
-    "total_channels": 237,
+    "playlist_name": "Ireen Store",
+    "total_channels": 248,
     "status": "success",
     "channels": [
         {
@@ -472,12 +472,6 @@
             "stream_url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8"
         },
         {
-            "name": "NEXUS TV HD",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/nexus_tv_hd.png",
-            "group": "Bangla",
-            "stream_url": "http://premiumtvs.space/live/YqXTywueEV/damp2purchase/411.ts"
-        },
-        {
             "name": "NTV HD",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ntv_hd.png",
             "group": "Bangla",
@@ -581,253 +575,330 @@
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b2628000.m3u8"
         },
         {
+            "name": "A Sports HD",
+            "logo": "https://i.postimg.cc/ZqbZdnHq/20251002-225834.png",
+            "group": "Sports Channels",
+            "stream_url": "https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8"
+        },
+        {
+            "name": "A SPORTS HD",
+            "logo": "https://i.postimg.cc/HncZYhLk/A-Sports.png",
+            "group": "Sports Channels",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8"
+        },
+        {
+            "name": "Astro Cricbuzz",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg",
+            "group": "Sports Channels",
+            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts"
+        },
+        {
             "name": "BeiN Sports 1",
             "logo": "https://i.postimg.cc/855N9Fv9/20250529-125601.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/33.m3u8"
         },
         {
             "name": "BEIN SPORTS 1 HD",
             "logo": "https://i.postimg.cc/rFLZ8Nvc/BEIN-SPORTS-1.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/30.m3u8"
         },
         {
             "name": "BeiN Sports 2",
             "logo": "https://i.postimg.cc/RFD4BMQF/20250529-125806.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/31.m3u8"
         },
         {
             "name": "BEIN SPORTS 3 HD",
             "logo": "https://i.postimg.cc/ZnPc9X15/BEIN-SPORTS-3.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/32.m3u8"
         },
         {
             "name": "BEIN SPORTS EXTRA HD",
             "logo": "https://i.postimg.cc/NF23WG2g/Be-IN-Sports-XTRA.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/34.m3u8"
         },
         {
             "name": "CR | Star Sports 1 Hindi",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/cr_star_sports_1_hindi.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://starsportshindiii.pages.dev/index.m3u8"
         },
         {
             "name": "CR | Ten Sports HD",
             "logo": "https://www.medianews4u.com/wp-content/uploads/2015/02/df8bdc0787eb68c35292ff74fa60466b-2-3.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://103.135.253.32:8080/Ten-Sports/tracks-v1a1/mono.m3u8"
+        },
+        {
+            "name": "Cricbuzz",
+            "logo": "https://i.postimg.cc/tRNg8djq/20261123-222859.png",
+            "group": "Sports Channels",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/22.m3u8"
+        },
+        {
+            "name": "ESPN",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/espn.svg",
+            "group": "Sports Channels",
+            "stream_url": "http://181.78.197.59:8000/play/a07z/index.m3u8"
         },
         {
             "name": "Euro Sports",
             "logo": "https://i.postimg.cc/K89SfFWN/20251208-221926.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/16.m3u8"
         },
         {
             "name": "FB | BeIN Sports",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/4/4d/BeIN_Sports_2014_flat.svg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://tvsen6.aynaott.com/beinsports/index.m3u8"
+        },
+        {
+            "name": "Fox Sports 1",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/fox_sports_1.svg",
+            "group": "Sports Channels",
+            "stream_url": "http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8"
+        },
+        {
+            "name": "FOX SPORTS CRICKET",
+            "logo": "https://i.postimg.cc/XvktmmZY/fox-cricket.png",
+            "group": "Sports Channels",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/26.m3u8"
         },
         {
             "name": "GAZI TV HD",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/6/60/Gtvhd.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://103.135.253.32:8080/Gazi-TV/index.m3u8"
         },
         {
             "name": "GAZI TV HD",
             "logo": "https://i.postimg.cc/mhWtqv9f/Gazi-TV.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/46.m3u8"
+        },
+        {
+            "name": "GEO SUPER",
+            "logo": "https://i.postimg.cc/52wrQTSg/GEO-SUPER.png",
+            "group": "Sports Channels",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/20.m3u8"
+        },
+        {
+            "name": "MIXER | Marquee Sports Network",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mixer_marquee_sports_network.png",
+            "group": "Sports Channels",
+            "stream_url": "https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8"
+        },
+        {
+            "name": "MIXER | NBC Sports",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mixer_nbc_sports.png",
+            "group": "Sports Channels",
+            "stream_url": "https://xumo-xumoent-vc-122-sjv70.fast.nbcuni.com/live/master.m3u8"
         },
         {
             "name": "MIXER | Unbeaten Sports Channel",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mixer_unbeaten_sports_channel.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://d1t5afz6qed3xk.cloudfront.net/Unbeaten.m3u8"
+        },
+        {
+            "name": "NFL | NFL Network",
+            "logo": "https://s3.aynaott.com/storage/79f1ee920d6931a767ae0030e1c7c12b",
+            "group": "Sports Channels",
+            "stream_url": "https://tvsen6.aynaott.com/nfl/index.m3u8"
+        },
+        {
+            "name": "NHL Network",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/nhl_network.svg",
+            "group": "Sports Channels",
+            "stream_url": "https://nhl-firetv.amagi.tv/playlist.m3u8"
         },
         {
             "name": "PTV SPORTS",
             "logo": "https://i.postimg.cc/3rcVsgwY/PTV-Sports.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/21.m3u8"
         },
         {
             "name": "SKY SPORTS CRICKET",
             "logo": "https://i.postimg.cc/SRvBV9nN/SKY-SPORTS-CRICKET.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/25.m3u8"
         },
         {
             "name": "SONY SPORTS TEN 1 HD",
             "logo": "https://i.postimg.cc/J48Z4FtV/Sony-Ten-1-HD.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/12.m3u8"
         },
         {
             "name": "SONY SPORTS TEN 2 HD",
             "logo": "https://i.postimg.cc/FHsS0JjV/Sony-Ten-2-HD.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/13.m3u8"
         },
         {
             "name": "SONY SPORTS TEN 3 HD",
             "logo": "https://i.postimg.cc/SxTMdNrB/Sony-Ten-3-HD.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/14.m3u8"
         },
         {
             "name": "Sony Sports Ten 3 HD Hindi",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sony_sports_ten_3_hd.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts"
         },
         {
             "name": "SONY SPORTS TEN 5 HD",
             "logo": "https://i.postimg.cc/7L5TW8tJ/Sony-Ten-5-HD.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/15.m3u8"
         },
         {
             "name": "Sony Ten 1",
             "logo": "https://i.postimg.cc/cH2Cc7zX/20250529-122631.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009276",
-            "referer": "https://techandeat.online"
-        },
-        {
-            "name": "Sony Ten 2",
-            "logo": "https://i.postimg.cc/x12k7R1Z/20250529-122855.png",
-            "group": "Sports",
-            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009277",
             "referer": "https://techandeat.online"
         },
         {
             "name": "Sony Ten 3",
             "logo": "https://i.postimg.cc/vH9g3jb9/20250529-123011.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009278",
             "referer": "https://techandeat.online"
         },
         {
             "name": "Sony Ten 5",
             "logo": "https://i.postimg.cc/kMLRN93q/20250529-123147.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009275",
             "referer": "https://techandeat.online"
         },
         {
             "name": "Star Sports 1",
             "logo": "https://i.postimg.cc/N0sYHFDj/20251002-230032.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/5.m3u8"
         },
         {
             "name": "Star Sports 2",
             "logo": "https://i.postimg.cc/yNvbVTHy/20250702-032050.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://tvsen7.aynaott.com/ssport2hd/index.m3u8"
         },
         {
             "name": "STAR SPORTS 2 HD",
             "logo": "https://i.postimg.cc/jjy7Q80w/Star-Sports-2.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/6.m3u8"
         },
         {
             "name": "STAR SPORTS 3",
             "logo": "https://i.postimg.cc/mrLmzDDk/Star-Sports-3.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/9.m3u8"
         },
         {
             "name": "Star Sports Select 1 HD",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_sports_select_1_hd.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://103.135.253.32:8080/STAR-SPORTS-SELECT-1/index.m3u8"
         },
         {
             "name": "STAR SPORTS SELECT 1 HD",
             "logo": "https://i.postimg.cc/85sw40LV/Star-Sports-Select-1.jpg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/7.m3u8"
         },
         {
             "name": "Star Sports SL 1",
             "logo": "https://i.postimg.cc/50ykjF9d/20250702-032238.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://103.114.11.37:8081/Star-select-1/index.m3u8?token=scn"
         },
         {
             "name": "Star Sports SL 2",
             "logo": "https://i.postimg.cc/DzvFX06y/20251002-225947.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/8.m3u8"
         },
         {
             "name": "T Sports HD",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/t_sports_hd.svg",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://103.135.253.32:8080/T-SPORTS-FULL-HD/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "T Sports HD",
             "logo": "https://i.postimg.cc/VL5yTtwr/20250707-141739.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/10.m3u8"
         },
         {
             "name": "T SPORTS HD",
             "logo": "https://i.postimg.cc/j24W7sCV/T-Sports.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/11.m3u8"
+        },
+        {
+            "name": "Ten Cricket",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ten_cricket.png",
+            "group": "Sports Channels",
+            "stream_url": "http://103.135.253.32:8080/TEN-CRECKET/tracks-v1a1/mono.m3u8"
+        },
+        {
+            "name": "Ten Cricket",
+            "logo": "https://i.postimg.cc/fWV00yP8/20250529-123315.png",
+            "group": "Sports Channels",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/19.m3u8"
         },
         {
             "name": "TEN SPORTS HD",
             "logo": "https://i.postimg.cc/DZzpDZk4/Ten-Sports.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/18.m3u8"
         },
         {
             "name": "TNT SPORTS 1 HD",
             "logo": "https://i.postimg.cc/zvdkSTXs/TNT-Sports-1.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/27.m3u8"
         },
         {
             "name": "TNT SPORTS 2 HD",
             "logo": "https://i.postimg.cc/tghtvK48/TNT-Sports-2.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/28.m3u8"
         },
         {
             "name": "TNT SPORTS 3 HD",
             "logo": "https://i.postimg.cc/Wp9my6s3/TNT-Sports-3.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/29.m3u8"
         },
         {
             "name": "Willow by Cricbuzz",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_by_cricbuzz.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://tvsen5.aynaott.com/willowhd/index.m3u8"
         },
         {
             "name": "Willow Sports",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_sports.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8"
         },
         {
             "name": "Willow Sports HD",
             "logo": "https://i.postimg.cc/qgfrNjFH/20250529-123654.png",
-            "group": "Sports",
+            "group": "Sports Channels",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/24.m3u8"
         },
         {
@@ -974,13 +1045,6 @@
             "logo": "https://i.postimg.cc/251DGH5w/20260930-231736.png",
             "group": "Hindi Movie",
             "stream_url": "http://live.balajibroadband.com:3500/live/3418.m3u8"
-        },
-        {
-            "name": "Sony Max 2",
-            "logo": "https://i.postimg.cc/KYbYqvJh/20250529-132238.png",
-            "group": "Hindi Movie",
-            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000044878",
-            "referer": "https://techandeat.online"
         },
         {
             "name": "Sony Max HD",
