@@ -113,7 +113,7 @@ KEYWORD_CATEGORIES = [
             'shemaroo bollywood', 'maha movie', 'cinema tv', 'manoranjan tv',
             'manoranjan movies', 'wow cinema', 'enterr10 movies', 'star utsav movies',
             'housefull movies', 'housefull action', 'box cinema', 'abzy movies',
-            'abzy cool', 'movie house'
+            'abzy cool', 'movie house', 'and explore', '&explore'
         ],
         "exclude": []
     },
