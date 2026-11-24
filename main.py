@@ -59,7 +59,9 @@ KEYWORD_CATEGORIES = [
             'global tv', 'green tv', 'channel s', 'bangla tv', 'sangbad', 'duronto',
             'gaan bangla', 'gaanbangla', 'movie bangla', 'channel 16', 'channel sixteen',
             'titas tv', 'diganta', 'islamic tv', 'peace tv bangla', 'iqra bangla',
-            'madani bangla', 'atn music', 'bangla 21', 'falguni',
+            'Jago News 24', 'channel 1', 'me tv', 'my tv', 'nrb', 'gazi tv',
+            'thikana', 'enter tv', 'desheBideshe', 'desh bangla', 'gtv',
+            'madani bangla', 'atn music', 'bangla 21', 'falguni', 'eptv',
             # কলকাতা বাংলার সব জনপ্রিয় চ্যানেল
             'star jalsha', 'star jalsha movies', 'jalsha movies', 'zee bangla',
             'zee bangla cinema', 'colors bangla', 'abp ananda', 'sony aath',
@@ -74,7 +76,7 @@ KEYWORD_CATEGORIES = [
         "group": "Sports",
         "keywords": [
             # বাংলাদেশ, ইন্ডিয়া ও সাবকন্টিনেন্টের সব জনপ্রিয় স্পোর্টস চ্যানেল
-            't sports', 'tsports', 'gazi tv', 'gtv',
+            't sports', 'tsports', 'match', 'laliga',
             'star sports', 'star cricket', 'sony sports', 'sony ten', 'sony teen',
             'sony six', 'sony espn', 'ten sports', 'ten cricket', 'sports18', 'sports 18',
             'dd sports', 'fancode', 'willow', 'criclife', 'cricbuzz',
