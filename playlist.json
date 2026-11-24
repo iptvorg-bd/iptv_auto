@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 425,
+    "total_channels": 441,
     "status": "success",
     "channels": [
         {
@@ -8,6 +8,12 @@
             "logo": "https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/ed/Duronto_TV_logo.png",
             "group": "Bangla",
             "stream_url": "http://103.135.253.32:8080/DORONTU-TV/index.m3u8"
+        },
+        {
+            "name": "1. The LEGO Channel",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/1_the_lego_channel.png",
+            "group": "Bangla",
+            "stream_url": "https://dh18i7whff86v.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-pslwq5nud9zg9/index.m3u8"
         },
         {
             "name": "Ananda Tv",
@@ -277,6 +283,18 @@
             "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
         },
         {
+            "name": "Channel 1",
+            "logo": "https://i.postimg.cc/Zqgx8hm1/20260430-184013.png",
+            "group": "Bangla",
+            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/playlist.m3u8"
+        },
+        {
+            "name": "Channel 1",
+            "logo": "https://i.postimg.cc/Zqgx8hm1/20260430-184013.png",
+            "group": "Bangla",
+            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8"
+        },
+        {
             "name": "Channel 16",
             "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGN4JrZ3Ur3BHiD2tQhsQq3WQ5DXpv7HATFyNDT6o-rSNwAZaeQieMBdfPoGPio5UPipGV2ZBb8rLmyYJe5vySfQjEmTE5MLc_6q8CKfXuzb4eRQREjPiyL5tkncb1Xt5pVMJa6t77CT98JvAFozg95IH_9qofXJ2s1ubKCbJ-_JsuRVb458aBztLImQ/s1080/1000015295.png",
             "group": "Bangla",
@@ -299,12 +317,6 @@
             "logo": "https://i.postimg.cc/wv9FKrhQ/Channel-24.jpg",
             "group": "Bangla",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/40.m3u8"
-        },
-        {
-            "name": "Channel 24",
-            "logo": "https://i.imgur.com/4JLkaF7.png",
-            "group": "Bangla",
-            "stream_url": "http://premiumtvs.space/live/YqXTywueEV/damp2purchase/391.ts"
         },
         {
             "name": "Channel 9",
@@ -373,6 +385,12 @@
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangla",
             "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
+            "group": "Bangla",
+            "stream_url": "https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8"
         },
         {
             "name": "Channel S UK",
@@ -583,6 +601,24 @@
             "stream_url": "https://ekusheyserver.com/hls-live/livepkgr/_definst_/liveevent/livestream2.m3u8"
         },
         {
+            "name": "Enter TV",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/enter_tv.png",
+            "group": "Bangla",
+            "stream_url": "https://live1.entertv.com.bd/entertv/tracks-v1a1/mono.m3u8"
+        },
+        {
+            "name": "Enter TV",
+            "logo": "https://i.postimg.cc/g06jByt1/entertv.jpg",
+            "group": "Bangla",
+            "stream_url": "https://live1.entertv.com.bd/entertv/index.m3u8"
+        },
+        {
+            "name": "Enter TV",
+            "logo": "https://i.postimg.cc/g06jByt1/entertv.jpg",
+            "group": "Bangla",
+            "stream_url": "https://live1.entertv.com.bd/entertv/index.fmp4.m3u8"
+        },
+        {
             "name": "Enterr10 Bangla",
             "logo": "https://dtil.tmsimg.com/assets/s143018_ld_h15_aa.png?lock=720x540",
             "group": "Bangla",
@@ -599,6 +635,38 @@
             "logo": "https://dtil.tmsimg.com/assets/s143018_ld_h15_aa.png?lock=720x540",
             "group": "Bangla",
             "stream_url": "https://live-bangla.akamaized.net/liveabr/playlist.m3u8"
+        },
+        {
+            "name": "Gazi TV",
+            "logo": "https://i.imgur.com/2Lzhiq6.png",
+            "group": "Bangla",
+            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8"
+        },
+        {
+            "name": "Gazi TV",
+            "logo": "https://i.imgur.com/2Lzhiq6.png",
+            "group": "Bangla",
+            "stream_url": "http://103.89.248.130:8082/GAZI-TV/index.m3u8"
+        },
+        {
+            "name": "Gazi TV",
+            "logo": "https://i.imgur.com/2Lzhiq6.png",
+            "group": "Bangla",
+            "stream_url": "https://tvsen5.aynaott.com/Ravc7gPCZpxk/index.m3u8",
+            "referer": "https://web.aynaott.com/",
+            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+        },
+        {
+            "name": "GAZI TV HD",
+            "logo": "https://static.wikia.nocookie.net/logopedia/images/6/60/Gtvhd.png",
+            "group": "Bangla",
+            "stream_url": "http://103.135.253.32:8080/Gazi-TV/index.m3u8"
+        },
+        {
+            "name": "GAZI TV HD",
+            "logo": "https://i.postimg.cc/mhWtqv9f/Gazi-TV.jpg",
+            "group": "Bangla",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/46.m3u8"
         },
         {
             "name": "Global TV",
@@ -801,6 +869,12 @@
             "stream_url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8"
         },
         {
+            "name": "Me Tv",
+            "logo": "https://i.postimg.cc/j2hVjtyP/20250529-103904.png",
+            "group": "Bangla",
+            "stream_url": "https://iptvbd.live/metv1080/1080.m3u8"
+        },
+        {
             "name": "Mohona TV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mohona_tv.svg",
             "group": "Bangla",
@@ -853,6 +927,30 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/dhoom_music_bangla.png",
             "group": "Bangla",
             "stream_url": "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8"
+        },
+        {
+            "name": "My Tv",
+            "logo": "https://i.postimg.cc/HxGF4V2b/20250529-103226.png",
+            "group": "Bangla",
+            "stream_url": "https://tvsen6.aynaott.com/XMpHaEf0ANBhv8w6NWR7/index.m3u8"
+        },
+        {
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
+            "group": "Bangla",
+            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/tracks-v1a1/mono.m3u8"
+        },
+        {
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
+            "group": "Bangla",
+            "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/index.m3u8"
+        },
+        {
+            "name": "My TV",
+            "logo": "https://i.imgur.com/475qK5T.png",
+            "group": "Bangla",
+            "stream_url": "http://103.89.248.130:8082/MY-TV/index.m3u8"
         },
         {
             "name": "Nagorik",
@@ -919,6 +1017,12 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/nexus_tv_hd.png",
             "group": "Bangla",
             "stream_url": "http://premiumtvs.space/live/YqXTywueEV/damp2purchase/411.ts"
+        },
+        {
+            "name": "NRB HD TV",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/nrb_hd_tv.png",
+            "group": "Bangla",
+            "stream_url": "https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8"
         },
         {
             "name": "NTV",
@@ -1127,6 +1231,18 @@
             "stream_url": "http://103.89.248.130:8082/sunbangla/index.m3u8"
         },
         {
+            "name": "Thikana",
+            "logo": "https://ui-avatars.com/api/?name=Thikana&background=17324d&color=ffffff&size=256&length=3&format=png",
+            "group": "Bangla",
+            "stream_url": "https://5dd3981940faa.streamlock.net/thikanatv/thikanatv/playlist.m3u8"
+        },
+        {
+            "name": "Thikana Television",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/thikana_television.png",
+            "group": "Bangla",
+            "stream_url": "https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8"
+        },
+        {
             "name": "Zee 24 Ghanta",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/zee_24_ghanta.png",
             "group": "Bangla",
@@ -1191,6 +1307,12 @@
             "logo": "https://i.postimg.cc/HncZYhLk/A-Sports.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8"
+        },
+        {
+            "name": "Astro Cricbuzz",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg",
+            "group": "Sports",
+            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts"
         },
         {
             "name": "BeiN Sports 1",
@@ -1303,12 +1425,6 @@
             "stream_url": "https://tvsen6.aynaott.com/beinsports/index.m3u8"
         },
         {
-            "name": "FOX Sports",
-            "logo": "https://ui-avatars.com/api/?name=FOX%20Sports&background=17324d&color=ffffff&size=256&length=3&format=png",
-            "group": "Sports",
-            "stream_url": "http://45.5.118.152:8000/play/a08x/index.m3u8"
-        },
-        {
             "name": "Fox Sports 1",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/fox_sports_1.svg",
             "group": "Sports",
@@ -1325,44 +1441,6 @@
             "logo": "https://i.postimg.cc/XvktmmZY/fox-cricket.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/26.m3u8"
-        },
-        {
-            "name": "Gazi TV",
-            "logo": "https://i.imgur.com/2Lzhiq6.png",
-            "group": "Sports",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8"
-        },
-        {
-            "name": "Gazi TV",
-            "logo": "https://i.imgur.com/2Lzhiq6.png",
-            "group": "Sports",
-            "stream_url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/gazibdz.stream/tracks-v1a1/mono.m3u8"
-        },
-        {
-            "name": "Gazi TV",
-            "logo": "https://i.imgur.com/2Lzhiq6.png",
-            "group": "Sports",
-            "stream_url": "http://103.89.248.130:8082/GAZI-TV/index.m3u8"
-        },
-        {
-            "name": "Gazi TV",
-            "logo": "https://i.imgur.com/2Lzhiq6.png",
-            "group": "Sports",
-            "stream_url": "https://tvsen5.aynaott.com/Ravc7gPCZpxk/index.m3u8",
-            "referer": "https://web.aynaott.com/",
-            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-        },
-        {
-            "name": "GAZI TV HD",
-            "logo": "https://static.wikia.nocookie.net/logopedia/images/6/60/Gtvhd.png",
-            "group": "Sports",
-            "stream_url": "http://103.135.253.32:8080/Gazi-TV/index.m3u8"
-        },
-        {
-            "name": "GAZI TV HD",
-            "logo": "https://i.postimg.cc/mhWtqv9f/Gazi-TV.jpg",
-            "group": "Sports",
-            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/46.m3u8"
         },
         {
             "name": "GEO SUPER",
@@ -1410,6 +1488,12 @@
             "name": "Sky Sports Cricket HD",
             "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
             "group": "Sports",
+            "stream_url": "http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/7343/index.m3u8"
+        },
+        {
+            "name": "Sky Sports Cricket HD",
+            "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
+            "group": "Sports",
             "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/7343/index.m3u8"
         },
         {
@@ -1417,6 +1501,12 @@
             "logo": "https://i.ibb.co.com/6ckgkzSh/4573.png",
             "group": "Sports",
             "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5039/index.m3u8"
+        },
+        {
+            "name": "SKY SPORTS PREMIER LEAGUE",
+            "logo": "https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg",
+            "group": "Sports",
+            "stream_url": "http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/5042/index.m3u8"
         },
         {
             "name": "SKY SPORTS PREMIER LEAGUE",
@@ -1959,6 +2049,12 @@
             "group": "Hindi Movie",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009253",
             "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Star Gold Thrills",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png",
+            "group": "Hindi Movie",
+            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
         },
         {
             "name": "Zee Action",
