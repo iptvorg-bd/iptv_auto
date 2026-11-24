@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 428,
+    "total_channels": 431,
     "status": "success",
     "channels": [
         {
@@ -361,6 +361,12 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/channel_s.png",
             "group": "Bangla",
             "stream_url": "http://103.135.253.32:8080/Channel-S/index.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.postimg.cc/nV38nLkH/20260913-092507.png",
+            "group": "Bangla",
+            "stream_url": "https://box.bbaria.net:8083/ChannelS/video.m3u8"
         },
         {
             "name": "Channel S",
@@ -1410,6 +1416,12 @@
             "name": "Sky Sports Cricket HD",
             "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
             "group": "Sports",
+            "stream_url": "http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/7343/index.m3u8"
+        },
+        {
+            "name": "Sky Sports Cricket HD",
+            "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
+            "group": "Sports",
             "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/7343/index.m3u8"
         },
         {
@@ -1417,6 +1429,12 @@
             "logo": "https://i.ibb.co.com/6ckgkzSh/4573.png",
             "group": "Sports",
             "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5039/index.m3u8"
+        },
+        {
+            "name": "SKY SPORTS PREMIER LEAGUE",
+            "logo": "https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg",
+            "group": "Sports",
+            "stream_url": "http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/5042/index.m3u8"
         },
         {
             "name": "SKY SPORTS PREMIER LEAGUE",
