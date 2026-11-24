@@ -1,4 +1,4 @@
-#EXTM3U name="Ahmed Store IPTV | Total Channels: 431"
+#EXTM3U name="Ahmed Store IPTV | Total Channels: 425"
 
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/ed/Duronto_TV_logo.png" group-title="Bangla",0. Duronto TV
 http://103.135.253.32:8080/DORONTU-TV/index.m3u8
@@ -127,8 +127,6 @@ http://103.135.253.32:8080/Channel-S/index.m3u8
 https://box.bbaria.net:8083/ChannelS/video.m3u8
 #EXTINF:-1 tvg-logo="https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png" group-title="Bangla",Channel S
 http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8
-#EXTINF:-1 tvg-logo="https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png" group-title="Bangla",Channel S
-https://app.ncare.live/live-orgin/channels.stream/live-orgin/channels.stream/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png" group-title="Bangla",Channel S UK
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/colors_bangla.svg" group-title="Bangla",Colors Bangla
@@ -273,6 +271,8 @@ http://premiumtvs.space/live/YqXTywueEV/damp2purchase/1036.ts
 https://tvsen6.aynaott.com/maasrangatv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/596kS6mM/MAASRANGA-TV-HD.jpg" group-title="Bangla",MAASRANGA TV HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/45.m3u8
+#EXTINF:-1 tvg-logo="https://madanichannelbangla.tv/img/img/logo/b-logo.png" group-title="Bangla",MADANI Channel Bangla
+https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mohona_tv.svg" group-title="Bangla",Mohona TV
 https://tvsen6.aynaott.com/AkyX5dunzju4cpo26dr7/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/CKWpPvFB/20250529-104420.png" group-title="Bangla",Mohona Tv
@@ -405,8 +405,6 @@ https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/HncZYhLk/A-Sports.png" group-title="Sports",A SPORTS HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg" group-title="Sports",Astro Cricbuzz
-http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/855N9Fv9/20250529-125601.png" group-title="Sports",BeiN Sports 1
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/33.m3u8
 #EXTINF:-1 tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png" group-title="Sports",beIN Sports 1
@@ -482,13 +480,9 @@ https://tvsen7.aynaott.com/zY3hJ7pQ2vM5gD8s/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/SRvBV9nN/SKY-SPORTS-CRICKET.png" group-title="Sports",SKY SPORTS CRICKET
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/25.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png" group-title="Sports",Sky Sports Cricket HD
-http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/7343/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png" group-title="Sports",Sky Sports Cricket HD
 http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/7343/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/6ckgkzSh/4573.png" group-title="Sports",SKY SPORTS Mix HD
 http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5039/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg" group-title="Sports",SKY SPORTS PREMIER LEAGUE
-http://33a28853.cbilant.com/iptv/HVGN6PEPMAXGE2R9NS99WXG4/5042/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg" group-title="Sports",SKY SPORTS PREMIER LEAGUE
 http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5042/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/J48Z4FtV/Sony-Ten-1-HD.jpg" group-title="Sports",SONY SPORTS TEN 1 HD
@@ -497,8 +491,6 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/12.m3u8
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/13.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/SxTMdNrB/Sony-Ten-3-HD.jpg" group-title="Sports",SONY SPORTS TEN 3 HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/14.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sony_sports_ten_3_hd.png" group-title="Sports",Sony Sports Ten 3 HD Hindi
-http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/7L5TW8tJ/Sony-Ten-5-HD.jpg" group-title="Sports",SONY SPORTS TEN 5 HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/15.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/cH2Cc7zX/20250529-122631.png" group-title="Sports",Sony Ten 1
@@ -577,8 +569,6 @@ https://tvsen7.aynaott.com/tsn2/index.m3u8
 https://tvsen7.aynaott.com/tsn3/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_by_cricbuzz.png" group-title="Sports",Willow by Cricbuzz
 https://tvsen5.aynaott.com/willowhd/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_sports.png" group-title="Sports",Willow Sports
-https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/HntSg3xw/20240823_024624.png" group-title="Sports",Willow Sports
 https://tvsen5.aynaott.com/willowhd/index.m3u8?e=1784102512&u=ee5437a7-c16b-4700-b317-a41b77d5cba9&token=7058af1b60fb3bcfd7f687bf5b7866aa
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/HntSg3xw/20240823_024624.png" group-title="Sports",Willow Sports 2
@@ -691,8 +681,6 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/50.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/vH1DDKck/20250529-132424.png" group-title="Hindi Movie",Sony Wah
 #EXTVLCOPT:http-referrer=https://techandeat.online
 https://techandeat.online/sliv/stream.m3u8?id=1000009253
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png" group-title="Hindi Movie",Star Gold Thrills
-http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540" group-title="Hindi Movie",Zee Action
 http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/VN1c9Ztw/20240823_022636.png" group-title="Hindi Movie",Zee Cinema
