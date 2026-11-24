@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 251,
+    "total_channels": 250,
     "status": "success",
     "channels": [
         {
@@ -340,6 +340,12 @@
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
         },
         {
+            "name": "IN | R Plus News",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/in_r_plus_news.png",
+            "group": "Bangla",
+            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8"
+        },
+        {
             "name": "IN | Republic Bangla",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/in_republic_bangla.png",
             "group": "Bangla",
@@ -500,6 +506,12 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/peace_tv_bangla.png",
             "group": "Bangla",
             "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8"
+        },
+        {
+            "name": "R Plus Gold",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/r_plus_gold.png",
+            "group": "Bangla",
+            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "RTV",
@@ -737,12 +749,6 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/14.m3u8"
         },
         {
-            "name": "Sony Sports Ten 3 HD Hindi",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sony_sports_ten_3_hd.png",
-            "group": "Sports",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts"
-        },
-        {
             "name": "SONY SPORTS TEN 5 HD",
             "logo": "https://i.postimg.cc/7L5TW8tJ/Sony-Ten-5-HD.jpg",
             "group": "Sports",
@@ -849,8 +855,8 @@
             "stream_url": "http://103.135.253.32:8080/TEN-CRECKET/tracks-v1a1/mono.m3u8"
         },
         {
-            "name": "Ten Cricket",
-            "logo": "https://i.postimg.cc/fWV00yP8/20250529-123315.png",
+            "name": "TEN CRICKET",
+            "logo": "https://i.postimg.cc/26X9fDrJ/ten-cricket.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/19.m3u8"
         },
@@ -1024,12 +1030,6 @@
             "referer": "https://techandeat.online"
         },
         {
-            "name": "Sony Max 1",
-            "logo": "https://i.postimg.cc/251DGH5w/20260930-231736.png",
-            "group": "Hindi Movie",
-            "stream_url": "http://live.balajibroadband.com:3500/live/3418.m3u8"
-        },
-        {
             "name": "Sony Max 2",
             "logo": "https://i.postimg.cc/KYbYqvJh/20250529-132238.png",
             "group": "Hindi Movie",
@@ -1061,12 +1061,6 @@
             "group": "Hindi Movie",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009253",
             "referer": "https://techandeat.online"
-        },
-        {
-            "name": "Star Gold Thrills",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png",
-            "group": "Hindi Movie",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
         },
         {
             "name": "Zee Cinema HD",
