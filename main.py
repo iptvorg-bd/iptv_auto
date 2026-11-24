@@ -76,7 +76,7 @@ KEYWORD_CATEGORIES = [
         "group": "Sports",
         "keywords": [
             # বাংলাদেশ, ইন্ডিয়া ও সাবকন্টিনেন্টের সব জনপ্রিয় স্পোর্টস চ্যানেল
-            't sports', 'tsports', 'match', 'laliga',
+            't sports', 'tsports', 'wwe', 'laliga',
             'star sports', 'star cricket', 'sony sports', 'sony ten', 'sony teen',
             'sony six', 'sony espn', 'ten sports', 'ten cricket', 'sports18', 'sports 18',
             'dd sports', 'fancode', 'willow', 'criclife', 'cricbuzz',
