@@ -21,7 +21,7 @@ CUSTOM_PLAYLISTS = [
     "https://raw.githubusercontent.com/time2shine/Rokon-IPTV/3463896769491e8492dc7953e7b5315431fed440/playlist.m3u",  # প্লেলিস্ট ১
     "https://raw.githubusercontent.com/sarsx3/aladin430/refs/heads/main/playlists/eamin-tv.m3u",  # কাস্টম প্লেলিস্ট ২
     "https://raw.githubusercontent.com/sm-monirulislam/SM-IPTV/refs/heads/main/new_isp.m3u",  # কাস্টম প্লেলিস্ট ৩
-    "",  # কাস্টম প্লেলিস্ট ৪
+    "https://raw.githubusercontent.com/iptvorg-bd/Bingst/refs/heads/main/IPTV%20Playlist.m3u",  # কাস্টম প্লেলিস্ট ৪
     "",  # কাস্টম প্লেলিস্ট ৫
     "",  # কাস্টম প্লেলিস্ট ৬
     "",  # কাস্টম প্লেলিস্ট ৭
