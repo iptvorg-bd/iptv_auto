@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 443,
+    "total_channels": 441,
     "status": "success",
     "channels": [
         {
@@ -382,12 +382,6 @@
         },
         {
             "name": "Channel S",
-            "logo": "https://i.postimg.cc/nV38nLkH/20260913-092507.png",
-            "group": "Bangla",
-            "stream_url": "https://box.bbaria.net:8083/ChannelS/video.m3u8"
-        },
-        {
-            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangla",
             "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8"
@@ -733,12 +727,6 @@
             "logo": "https://static.wikia.nocookie.net/logopedia/images/8/85/News18_Bangla1.svg/",
             "group": "Bangla",
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
-        },
-        {
-            "name": "IN | R Plus News",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/in_r_plus_news.png",
-            "group": "Bangla",
-            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8"
         },
         {
             "name": "IN | Republic Bangla",
@@ -1092,12 +1080,6 @@
         },
         {
             "name": "R Plus Gold",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/r_plus_gold.png",
-            "group": "Bangla",
-            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8"
-        },
-        {
-            "name": "R Plus Gold",
             "logo": "https://i.postimg.cc/P5GdL9Q7/RPlus-Gold-logo-(2013).webp",
             "group": "Bangla",
             "stream_url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cf883da3-f9f5-4c70-b0ef-b3ac2e2ad1e3/index.m3u8"
@@ -1405,6 +1387,12 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/22.m3u8"
         },
         {
+            "name": "DAZN LaLiga HD",
+            "logo": "https://i.ibb.co.com/CpfVC7xc/images.png",
+            "group": "Sports",
+            "stream_url": "http://raiser.rostelekom.xyz/iptv/7D4RLFDF5DDPLG/31856/index.m3u8"
+        },
+        {
             "name": "Dubai Sports 1",
             "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_178fd67f7c1b0e4143333962bc7600e7_playmist_dubai_sports_2_400x400.jpg",
             "group": "Sports",
@@ -1465,6 +1453,12 @@
             "logo": "https://i.postimg.cc/52wrQTSg/GEO-SUPER.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/20.m3u8"
+        },
+        {
+            "name": "M+ LaLiga HD",
+            "logo": "https://i.ibb.co.com/7dd0RGhB/images-1.png",
+            "group": "Sports",
+            "stream_url": "http://raiser.rostelekom.xyz/iptv/7D4RLFDF5DDPLG/31853/index.m3u8"
         },
         {
             "name": "MIXER | NBC Sports",
@@ -1753,6 +1747,12 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_by_cricbuzz.png",
             "group": "Sports",
             "stream_url": "https://tvsen5.aynaott.com/willowhd/index.m3u8"
+        },
+        {
+            "name": "Willow Sports",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/willow_sports.png",
+            "group": "Sports",
+            "stream_url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8"
         },
         {
             "name": "Willow Sports",
@@ -2422,12 +2422,6 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8"
         },
         {
-            "name": "Sonic Bangla",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png",
-            "group": "Kids",
-            "stream_url": "http://bosstv.click:8080/live/18012689/77561563/92412.ts"
-        },
-        {
             "name": "0. Discovery Family",
             "logo": "https://static.wikia.nocookie.net/logopedia/images/5/51/Discovery_Family.svg",
             "group": "Documentary & Info",
@@ -2588,12 +2582,6 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ent_e24.png",
             "group": "Music",
             "stream_url": "https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8"
-        },
-        {
-            "name": "Mastiii",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mastiii.png",
-            "group": "Music",
-            "stream_url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8"
         },
         {
             "name": "MTV",
