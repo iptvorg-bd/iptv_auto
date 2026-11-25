@@ -115,7 +115,7 @@ KEYWORD_CATEGORIES = [
             'shemaroo bollywood', 'maha movie', 'cinema tv', 'manoranjan tv',
             'manoranjan movies', 'wow cinema', 'enterr10 movies', 'star utsav movies',
             'housefull movies', 'housefull action', 'box cinema', 'abzy movies',
-            'abzy cool', 'movie house', 'and explore', '&explore'
+            'abzy cool', 'movie house'
         ],
         "exclude": []
     },
@@ -159,7 +159,7 @@ KEYWORD_CATEGORIES = [
         "group": "Kids",
         "keywords": [
             'hungama', 'super hungama', 'pogo', 'cartoon network', 'cartoonnetwork',
-            'sonic', 'nickelodeon', 'nick', 'disney'
+            'sonic', 'nickelodeon', 'nick', 'disney', 'wow kids', 'jungle book'
         ],
         "exclude": []
     },
@@ -182,7 +182,7 @@ KEYWORD_CATEGORIES = [
             'sony mix', 'music india', 'showbox', 'e24', 'mnet', '8xm', 'ary musik',
             'trace urban', 'trace hits', 'now 70s', 'now 80s', 'now 90s', 'now rock',
             'deluxe music', 'clubbing tv', 'kiss tv', 'magic tv', 'heart tv',
-            'sangeet bangla', 'gaan bangla', 'dhoom music'
+            'sangeet bangla', 'gaan bangla', 'dhoom music', 'yrf'
         ],
         "exclude": []
     },
