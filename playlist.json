@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 441,
+    "total_channels": 456,
     "status": "success",
     "channels": [
         {
@@ -382,6 +382,12 @@
         },
         {
             "name": "Channel S",
+            "logo": "https://i.postimg.cc/nV38nLkH/20260913-092507.png",
+            "group": "Bangla",
+            "stream_url": "https://box.bbaria.net:8083/ChannelS/video.m3u8"
+        },
+        {
+            "name": "Channel S",
             "logo": "https://www.channels.com.bd/storage/project_files/logo/2024-05-14a_n17156821814310.png",
             "group": "Bangla",
             "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channels.stream/index.m3u8"
@@ -411,10 +417,22 @@
             "stream_url": "https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8"
         },
         {
+            "name": "Colors Bangla",
+            "logo": "https://dtil.tmsimg.com/assets/s157577_ld_h15_aa.png?lock=720x540",
+            "group": "Bangla",
+            "stream_url": "http://live.balajibroadband.com:3500/live/756.m3u8"
+        },
+        {
             "name": "Colors Bangla Cinema",
             "logo": "https://i.postimg.cc/13pfykGD/20250602-220936.png",
             "group": "Bangla",
             "stream_url": "http://103.114.11.37:8081/Colors-bangla-cinema/tracks-v1a1/mono.m3u8?token=scn"
+        },
+        {
+            "name": "Colors Bangla Cinema",
+            "logo": "https://dtil.tmsimg.com/assets/s142748_ld_h15_aa.png?lock=720x540",
+            "group": "Bangla",
+            "stream_url": "http://live.balajibroadband.com:3500/live/1657.m3u8"
         },
         {
             "name": "Colors Bangla HD",
@@ -727,6 +745,12 @@
             "logo": "https://static.wikia.nocookie.net/logopedia/images/8/85/News18_Bangla1.svg/",
             "group": "Bangla",
             "stream_url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
+        },
+        {
+            "name": "IN | R Plus News",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/in_r_plus_news.png",
+            "group": "Bangla",
+            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8"
         },
         {
             "name": "IN | Republic Bangla",
@@ -1077,6 +1101,12 @@
             "logo": "https://i.imgur.com/1ztVXUi.png",
             "group": "Bangla",
             "stream_url": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8?sid=RZNvDGQ64ECAC6SIlqJPeA"
+        },
+        {
+            "name": "R Plus Gold",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/r_plus_gold.png",
+            "group": "Bangla",
+            "stream_url": "https://thelegitpro.in/pntv/rplusnews24x7/tracks-v1a1/mono.m3u8"
         },
         {
             "name": "R Plus Gold",
@@ -1495,24 +1525,6 @@
             "logo": "https://i.postimg.cc/SRvBV9nN/SKY-SPORTS-CRICKET.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/25.m3u8"
-        },
-        {
-            "name": "Sky Sports Cricket HD",
-            "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
-            "group": "Sports",
-            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/7343/index.m3u8"
-        },
-        {
-            "name": "SKY SPORTS Mix HD",
-            "logo": "https://i.ibb.co.com/6ckgkzSh/4573.png",
-            "group": "Sports",
-            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5039/index.m3u8"
-        },
-        {
-            "name": "SKY SPORTS PREMIER LEAGUE",
-            "logo": "https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg",
-            "group": "Sports",
-            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5042/index.m3u8"
         },
         {
             "name": "SONY SPORTS TEN 1 HD",
@@ -1939,6 +1951,18 @@
             "stream_url": "https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8"
         },
         {
+            "name": "Colors Cineplex Bollywood",
+            "logo": "https://i.imgur.com/EbHSQAJ.png",
+            "group": "Hindi Movie",
+            "stream_url": "http://live.balajibroadband.com:3500/live/1763.m3u8"
+        },
+        {
+            "name": "Colors Cineplex Superhit",
+            "logo": "https://i.imgur.com/79g2kMA.png",
+            "group": "Hindi Movie",
+            "stream_url": "http://live.balajibroadband.com:3500/live/1450.m3u8"
+        },
+        {
             "name": "Goldmines",
             "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Goldmines%20Logo_Transparent.png",
             "group": "Hindi Movie",
@@ -2028,6 +2052,12 @@
             "logo": "https://i.postimg.cc/YS3BdNNW/20240823_022655.png",
             "group": "Hindi Movie",
             "stream_url": "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/151.ts"
+        },
+        {
+            "name": "Sony Max 1",
+            "logo": "https://i.postimg.cc/251DGH5w/20260930-231736.png",
+            "group": "Hindi Movie",
+            "stream_url": "http://live.balajibroadband.com:3500/live/3418.m3u8"
         },
         {
             "name": "Sony Max 2",
@@ -2172,6 +2202,12 @@
             "referer": "https://techandeat.online"
         },
         {
+            "name": "Sony Pix",
+            "logo": "https://dtil.tmsimg.com/assets/s143803_ld_h15_aa.png?lock=720x540",
+            "group": "English Movie",
+            "stream_url": "http://live.balajibroadband.com:3500/live/762.m3u8"
+        },
+        {
             "name": "Star Maa Movies",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_maa_movies.png",
             "group": "English Movie",
@@ -2212,6 +2248,12 @@
             "logo": "https://i.postimg.cc/pdy3k1qZ/20251202-090150.png",
             "group": "Hindi",
             "stream_url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsme.smil/media-udh.m3u8"
+        },
+        {
+            "name": "Colors",
+            "logo": "https://i.postimg.cc/F1t6r1gv/20240823_023247.png",
+            "group": "Hindi",
+            "stream_url": "http://live.balajibroadband.com:3500/live/144.m3u8"
         },
         {
             "name": "Colors Rishtey Americas",
@@ -2317,6 +2359,12 @@
             "referer": "https://techandeat.online"
         },
         {
+            "name": "Sony SAB",
+            "logo": "https://i.postimg.cc/Gpz6FLrP/20240823_023114.png",
+            "group": "Hindi",
+            "stream_url": "http://live.balajibroadband.com:3500/live/471.m3u8"
+        },
+        {
             "name": "Sony Sab HD",
             "logo": "https://i.postimg.cc/442mfGNp/20250529-132607.png",
             "group": "Hindi",
@@ -2384,6 +2432,12 @@
             "stream_url": "https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8"
         },
         {
+            "name": "2. The Jungle Book",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/2_the_jungle_book.png",
+            "group": "Kids",
+            "stream_url": "https://cc-4bhi5osabejc9.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-4bhi5osabejc9/junglebook.m3u8"
+        },
+        {
             "name": "Cartoon Network",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/cartoon_network.png",
             "group": "Kids",
@@ -2416,10 +2470,22 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/64.m3u8"
         },
         {
+            "name": "Nick Bangla",
+            "logo": "https://i.postimg.cc/GtzBrs18/20240823_021125.png",
+            "group": "Kids",
+            "stream_url": "http://live.balajibroadband.com:3500/live/1341.m3u8"
+        },
+        {
             "name": "POGO",
             "logo": "https://i.postimg.cc/502gHPf7/POGO1664977122.jpg",
             "group": "Kids",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8"
+        },
+        {
+            "name": "Sonic Bangla",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png",
+            "group": "Kids",
+            "stream_url": "http://bosstv.click:8080/live/18012689/77561563/92412.ts"
         },
         {
             "name": "0. Discovery Family",
@@ -2533,6 +2599,12 @@
             "name": "B4U Music",
             "logo": "https://dtil.tmsimg.com/assets/s158141_ld_h15_aa.png?lock=720x540",
             "group": "Music",
+            "stream_url": "https://streams.tangotv.in/B4UMUSIC/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "B4U Music",
+            "logo": "https://dtil.tmsimg.com/assets/s158141_ld_h15_aa.png?lock=720x540",
+            "group": "Music",
             "stream_url": "http://103.175.73.12:8080/live/157/master.m3u8"
         },
         {
@@ -2584,6 +2656,12 @@
             "stream_url": "https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8"
         },
         {
+            "name": "Mastiii",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mastiii.png",
+            "group": "Music",
+            "stream_url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8"
+        },
+        {
             "name": "MTV",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mtv.svg",
             "group": "Music",
@@ -2627,10 +2705,22 @@
             "stream_url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8"
         },
         {
+            "name": "MU | YRF Music HD",
+            "logo": "https://a.jsrdn.com/hls/23146/yrf-music/logo_20240322_175611_70.png",
+            "group": "Music",
+            "stream_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8"
+        },
+        {
             "name": "Music India",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/music_india.png",
             "group": "Music",
             "stream_url": "https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8"
+        },
+        {
+            "name": "YRF Music",
+            "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png",
+            "group": "Music",
+            "stream_url": "https://amg01412-xiaomiasia-yrfmusic-xiaomi-1rmk2.amagi.tv/playlist/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8"
         },
         {
             "name": "Zoom",
