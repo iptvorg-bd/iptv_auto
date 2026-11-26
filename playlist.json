@@ -227,12 +227,6 @@
             "stream_url": "https://tvsen6.aynaott.com/1d3uG9VCgrR9DRtWZM57/tracks-v1a1/mono.ts.m3u8"
         },
         {
-            "name": "Boishakhi TV",
-            "logo": "https://i.imgur.com/gxL05Y4.png",
-            "group": "Bangla",
-            "stream_url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8"
-        },
-        {
             "name": "BTV",
             "logo": "https://i.postimg.cc/y8cfPVhg/20240822-225146.png",
             "group": "Bangla",
@@ -962,12 +956,6 @@
             "name": "My TV",
             "logo": "https://i.imgur.com/475qK5T.png",
             "group": "Bangla",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8"
-        },
-        {
-            "name": "My TV",
-            "logo": "https://i.imgur.com/475qK5T.png",
-            "group": "Bangla",
             "stream_url": "http://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mytv-up-off.stream/tracks-v1a1/mono.m3u8"
         },
         {
@@ -1525,6 +1513,24 @@
             "logo": "https://i.postimg.cc/SRvBV9nN/SKY-SPORTS-CRICKET.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/25.m3u8"
+        },
+        {
+            "name": "Sky Sports Cricket HD",
+            "logo": "https://i.ibb.co.com/ZRTSsqGS/sky-sports-cricket.png",
+            "group": "Sports",
+            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/7343/index.m3u8"
+        },
+        {
+            "name": "SKY SPORTS Mix HD",
+            "logo": "https://i.ibb.co.com/6ckgkzSh/4573.png",
+            "group": "Sports",
+            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5039/index.m3u8"
+        },
+        {
+            "name": "SKY SPORTS PREMIER LEAGUE",
+            "logo": "https://i.ibb.co.com/0R2YXqLk/sky-sports.jpg",
+            "group": "Sports",
+            "stream_url": "http://6au8zl0c.megatv.fun/iptv/E8Q36367WLXKB3/5042/index.m3u8"
         },
         {
             "name": "SONY SPORTS TEN 1 HD",
@@ -2480,12 +2486,6 @@
             "logo": "https://i.postimg.cc/502gHPf7/POGO1664977122.jpg",
             "group": "Kids",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8"
-        },
-        {
-            "name": "Sonic Bangla",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png",
-            "group": "Kids",
-            "stream_url": "http://bosstv.click:8080/live/18012689/77561563/92412.ts"
         },
         {
             "name": "0. Discovery Family",
