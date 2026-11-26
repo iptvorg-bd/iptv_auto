@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 456,
+    "total_channels": 457,
     "status": "success",
     "channels": [
         {
@@ -373,6 +373,12 @@
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/channel_s.png",
             "group": "Bangla",
             "stream_url": "http://103.135.253.32:8080/Channel-S/index.m3u8"
+        },
+        {
+            "name": "Channel S",
+            "logo": "https://i.postimg.cc/nV38nLkH/20260913-092507.png",
+            "group": "Bangla",
+            "stream_url": "https://box.bbaria.net:8083/ChannelS/video.m3u8"
         },
         {
             "name": "Channel S",
@@ -804,6 +810,12 @@
             "name": "Jalsha Movies HD",
             "logo": "https://i.postimg.cc/T2nGNxc8/20250707-053157.png",
             "group": "Bangla",
+            "stream_url": "http://103.114.11.37:8081/Jalsha-Movies/index.m3u8?token=scn"
+        },
+        {
+            "name": "JALSHA MOVIES HD",
+            "logo": "https://i.postimg.cc/Y2ytDB7c/Jalsha-Movies.jpg",
+            "group": "Bangla",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/65.m3u8"
         },
         {
@@ -1067,12 +1079,6 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/43.m3u8"
         },
         {
-            "name": "NTV TV UK",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ntv_tv_uk.png",
-            "group": "Bangla",
-            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8"
-        },
-        {
             "name": "Peace TV Bangla",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/peace_tv_bangla.png",
             "group": "Bangla",
@@ -1191,8 +1197,14 @@
             "name": "Sony Aath",
             "logo": "https://i.postimg.cc/ZqgJkbLq/20250529-111438.png",
             "group": "Bangla",
-            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/62.m3u8",
+            "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009255",
             "referer": "https://techandeat.online"
+        },
+        {
+            "name": "SONY AATH",
+            "logo": "https://i.postimg.cc/xCKr5B9J/SONY-AATH.png",
+            "group": "Bangla",
+            "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/62.m3u8"
         },
         {
             "name": "STAR JALSHA",
@@ -1325,12 +1337,6 @@
             "logo": "https://i.postimg.cc/HncZYhLk/A-Sports.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8"
-        },
-        {
-            "name": "Astro Cricbuzz",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg",
-            "group": "Sports",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts"
         },
         {
             "name": "BeiN Sports 1",
@@ -1551,12 +1557,6 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/14.m3u8"
         },
         {
-            "name": "Sony Sports Ten 3 HD Hindi",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sony_sports_ten_3_hd.png",
-            "group": "Sports",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/98863.ts"
-        },
-        {
             "name": "SONY SPORTS TEN 5 HD",
             "logo": "https://i.postimg.cc/7L5TW8tJ/Sony-Ten-5-HD.jpg",
             "group": "Sports",
@@ -1683,6 +1683,12 @@
         {
             "name": "T Sports HD",
             "logo": "https://i.postimg.cc/VL5yTtwr/20250707-141739.png",
+            "group": "Sports",
+            "stream_url": "https://tvsen5.aynaott.com/TnMn5kZz8/index.m3u8"
+        },
+        {
+            "name": "T SPORTS HD",
+            "logo": "https://i.postimg.cc/j24W7sCV/T-Sports.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/11.m3u8"
         },
@@ -2099,12 +2105,6 @@
             "referer": "https://techandeat.online"
         },
         {
-            "name": "Star Gold Thrills",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png",
-            "group": "Hindi Movie",
-            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
-        },
-        {
             "name": "Zee Action",
             "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
             "group": "Hindi Movie",
@@ -2486,6 +2486,12 @@
             "logo": "https://i.postimg.cc/502gHPf7/POGO1664977122.jpg",
             "group": "Kids",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8"
+        },
+        {
+            "name": "Sonic Bangla",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png",
+            "group": "Kids",
+            "stream_url": "http://bosstv.click:8080/live/18012689/77561563/92412.ts"
         },
         {
             "name": "0. Discovery Family",
