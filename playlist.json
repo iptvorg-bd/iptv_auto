@@ -1,6 +1,6 @@
 {
     "playlist_name": "Ahmed Store",
-    "total_channels": 457,
+    "total_channels": 456,
     "status": "success",
     "channels": [
         {
@@ -80,12 +80,6 @@
             "logo": "https://i.imgur.com/K1HmMRz.png",
             "group": "Bangla",
             "stream_url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8"
-        },
-        {
-            "name": "ATN Bangla UK",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/atn_bangla_uk.png",
-            "group": "Bangla",
-            "stream_url": "https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8"
         },
         {
             "name": "ATN News",
@@ -1079,6 +1073,12 @@
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/43.m3u8"
         },
         {
+            "name": "NTV TV UK",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ntv_tv_uk.png",
+            "group": "Bangla",
+            "stream_url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8"
+        },
+        {
             "name": "Peace TV Bangla",
             "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/peace_tv_bangla.png",
             "group": "Bangla",
@@ -1337,6 +1337,12 @@
             "logo": "https://i.postimg.cc/HncZYhLk/A-Sports.png",
             "group": "Sports",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8"
+        },
+        {
+            "name": "Astro Cricbuzz",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg",
+            "group": "Sports",
+            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts"
         },
         {
             "name": "BeiN Sports 1",
@@ -2047,12 +2053,6 @@
             "stream_url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/tracks-v1a1/mono.m3u8"
         },
         {
-            "name": "MOV | Shemaroo Bollywood 2",
-            "logo": "https://a.jsrdn.com/hls/23141/shemaroo-bollywood/logo_20240206_185308_68.png",
-            "group": "Hindi Movie",
-            "stream_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8"
-        },
-        {
             "name": "Sony Max",
             "logo": "https://i.postimg.cc/zX9vhkhB/20250529-131834.png",
             "group": "Hindi Movie",
@@ -2103,6 +2103,12 @@
             "group": "Hindi Movie",
             "stream_url": "https://techandeat.online/sliv/stream.m3u8?id=1000009253",
             "referer": "https://techandeat.online"
+        },
+        {
+            "name": "Star Gold Thrills",
+            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png",
+            "group": "Hindi Movie",
+            "stream_url": "http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts"
         },
         {
             "name": "Zee Action",
@@ -2402,12 +2408,6 @@
             "stream_url": "http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/203.ts"
         },
         {
-            "name": "Zee TV",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/zee_tv.png",
-            "group": "Hindi",
-            "stream_url": "http://41.205.93.154/ZEE-TV/index.m3u8"
-        },
-        {
             "name": "ZEE TV HD",
             "logo": "https://i.postimg.cc/05cgH36Q/Zee-TV.jpg",
             "group": "Hindi",
@@ -2486,12 +2486,6 @@
             "logo": "https://i.postimg.cc/502gHPf7/POGO1664977122.jpg",
             "group": "Kids",
             "stream_url": "http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8"
-        },
-        {
-            "name": "Sonic Bangla",
-            "logo": "https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png",
-            "group": "Kids",
-            "stream_url": "http://bosstv.click:8080/live/18012689/77561563/92412.ts"
         },
         {
             "name": "0. Discovery Family",

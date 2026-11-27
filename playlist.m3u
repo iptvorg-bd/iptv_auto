@@ -1,4 +1,4 @@
-#EXTM3U name="Ahmed Store IPTV | Total Channels: 457"
+#EXTM3U name="Ahmed Store IPTV | Total Channels: 456"
 
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/etv-gspn-bangla/images/e/ed/Duronto_TV_logo.png" group-title="Bangla",0. Duronto TV
 http://103.135.253.32:8080/DORONTU-TV/index.m3u8
@@ -26,8 +26,6 @@ https://tvsen5.aynaott.com/P3y2URgG7LDe/tracks-v1a1/mono.ts.m3u8
 https://tvsen5.aynaott.com/P3y2URgG7LDe/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/K1HmMRz.png" group-title="Bangla",ATN Bangla
 https://tvsen5.aynaott.com/atnbangla/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/atn_bangla_uk.png" group-title="Bangla",ATN Bangla UK
-https://app.ncare.live/live-orgin/atnbanglauk-off.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4qZQKjo.png" group-title="Bangla",ATN News
 http://103.89.248.130:8082/ATN-NEWS/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4qZQKjo.png" group-title="Bangla",ATN News
@@ -367,6 +365,8 @@ http://103.89.248.130:8082/NTV/index.m3u8
 https://tvsen5.aynaott.com/xV4jEKf3D9zc/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/pTd8JMfw/Ntv.jpg" group-title="Bangla",NTV HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/43.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/ntv_tv_uk.png" group-title="Bangla",NTV TV UK
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/peace_tv_bangla.png" group-title="Bangla",Peace TV Bangla
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1ztVXUi.png" group-title="Bangla",Peace TV Bangla
@@ -455,6 +455,8 @@ https://yupptvcatchupire.yuppcdn.net/preview/zeebangla/2500.m3u8
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/HncZYhLk/A-Sports.png" group-title="Sports",A SPORTS HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/17.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/astro_cricbuzz.svg" group-title="Sports",Astro Cricbuzz
+http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/2494.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/855N9Fv9/20250529-125601.png" group-title="Sports",BeiN Sports 1
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/33.m3u8
 #EXTINF:-1 tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png" group-title="Sports",beIN Sports 1
@@ -707,8 +709,6 @@ https://streams.tangotv.in/GOLDMINES/ORIGIN/tracks-v1a1/mono.m3u8
 https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/mov_manoranjan_movies.png" group-title="Hindi Movie",MOV | Manoranjan Movies
 https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="https://a.jsrdn.com/hls/23141/shemaroo-bollywood/logo_20240206_185308_68.png" group-title="Hindi Movie",MOV | Shemaroo Bollywood 2
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/zX9vhkhB/20250529-131834.png" group-title="Hindi Movie",Sony Max
 #EXTVLCOPT:http-referrer=https://techandeat.online
 https://techandeat.online/sliv/stream.m3u8?id=1000009249
@@ -729,6 +729,8 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/50.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/vH1DDKck/20250529-132424.png" group-title="Hindi Movie",Sony Wah
 #EXTVLCOPT:http-referrer=https://techandeat.online
 https://techandeat.online/sliv/stream.m3u8?id=1000009253
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/star_gold_thrills.png" group-title="Hindi Movie",Star Gold Thrills
+http://rgkkw.live:8080/live/4dfoydR2gZ/clever3still/773735.ts
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540" group-title="Hindi Movie",Zee Action
 http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/967.ts
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/VN1c9Ztw/20240823_022636.png" group-title="Hindi Movie",Zee Cinema
@@ -830,8 +832,6 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/53.m3u8
 http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/203.ts
 #EXTINF:-1 tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG00260HWS.png?lock=720x540" group-title="Hindi",Zee Anmol
 http://rgkkw.live:80/live/1Aoen7elp5/IgMJ60tmAa/203.ts
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/zee_tv.png" group-title="Hindi",Zee TV
-http://41.205.93.154/ZEE-TV/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/05cgH36Q/Zee-TV.jpg" group-title="Hindi",ZEE TV HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/52.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/x8BwX6QW/20240823_022929.png" group-title="Hindi",Zee TV HD
@@ -860,8 +860,6 @@ http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/64.m3u8
 http://live.balajibroadband.com:3500/live/1341.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/502gHPf7/POGO1664977122.jpg" group-title="Kids",POGO
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/56.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/sonic_bangla.png" group-title="Kids",Sonic Bangla
-http://bosstv.click:8080/live/18012689/77561563/92412.ts
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/51/Discovery_Family.svg" group-title="Documentary & Info",0. Discovery Family
 https://tvsen5.aynaott.com/discoveryfamily/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/time2shine/IPTV-logos/main/logos/animal_planet.png" group-title="Documentary & Info",Animal Planet
