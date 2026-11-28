@@ -1,4 +1,4 @@
-#EXTM3U name="Ahmed Store Collected | Total: 809"
+#EXTM3U name="Ahmed Store Collected | Total: 816"
 
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/etv-gspn-bangla/images/b/b7/Ananda_TV_logo.png" group-title="Bangla",ANANDA TV HD
 http://103.135.253.32:8080/Anando-TV/index.m3u8
@@ -475,7 +475,9 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/ry5MbLR8/20250529-105712.png" group-title="Bangla",Zee Bangla HD
 https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b2628000.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/HLdjn6zR/20250602-220804.png" group-title="Bangla",Colors Bangla HD
-http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/60.m3u8
+http://103.114.11.37:8081/Colors-bangla/index.m3u8?token=scn
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/wM44Y5g2/20250711-062827.png" group-title="Bangla",Sun Bangla
+http://27.124.71.27/Sun_Bangla/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/ZqgJkbLq/20250529-111438.png" group-title="Bangla",Sony Aath
 #EXTVLCOPT:http-referrer=https://techandeat.online
 http://27.124.71.27/Sony_Aath/index.m3u8
@@ -493,6 +495,10 @@ https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsme.smil/media-udh.m3u8
 https://d1rc86nwwc9fag.cloudfront.net/260723/smil:rishteycineplexukdev.smil/chunklist_b1928000.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/bJzsJNt9/20250529-133255.png" group-title="Hindi",& Tv
 https://toffee.sm-monirul-islam-rs.workers.dev/tv_hd/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/PqN0KF2M/20251202-090224.png" group-title="Hindi Movie",Star Gold HD
+http://103.114.11.37:8081/StarGold/index.m3u8?token=scn
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/4xdM5tT7/20260402-210758.png" group-title="Hindi Movie",Star Gold Select
+http://103.114.11.37:8081/StarGoldSelect/index.m3u8?token=scn
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/q7gWQZjw/20251202-090307.png" group-title="Hindi",Star Plus
 https://d1rc86nwwc9fag.cloudfront.net/260723/starplusuk_2500/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/1z18kKRT/20250529-133622.png" group-title="Hindi",Zee Tv
@@ -524,8 +530,14 @@ https://techandeat.online/sliv/stream.m3u8?id=1000009253
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/yYTkD4Z5/20251222-213710.png" group-title="English Movie",Sony Pix
 #EXTVLCOPT:http-referrer=https://techandeat.online
 https://techandeat.online/sliv/stream.m3u8?id=1000009258
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/pLWxtpML/20260402-212201.png" group-title="English Movie",Movies Now
+http://27.124.71.27/Movies_Now/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/TYcpKMDZ/20251222-213635.png" group-title="English Movie",Star Movies HD
+http://103.114.11.37:8081/Star-Movies/index.m3u8?token=scn
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/X704Qs2Y/20260402-212800.png" group-title="English Movie",Star Movies Select
+http://103.114.11.37:8081/Star-movies-select/index.m3u8?token=scn
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/4dQCpzTm/20250630-050342.png" group-title="Kids",Nick Bangla
-http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/64.m3u8
+http://live.balajibroadband.com:3500/live/1341.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/W3FbtF4r/20250529-115709.png" group-title="Kids",Pogo
 https://toffee.sm-monirul-islam-rs.workers.dev/pogo/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/pXdcjfHg/20250529-115821.png" group-title="Documentary & Info",Discovery Kids
@@ -547,7 +559,7 @@ https://toffee.sm-monirul-islam-rs.workers.dev/animal_planet_hd/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/k4xxp7zh/20251002-232031.png" group-title="Documentary & Info",Discovery HD
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/63.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/VL5yTtwr/20250707-141739.png" group-title="Sports",T Sports HD
-https://tvsen5.aynaott.com/TnMn5kZz8/index.m3u8
+http://103.209.196.22:84/feed1001/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/ZqbZdnHq/20251002-225834.png" group-title="Sports",A Sports HD
 https://tvsen6.aynaott.com/zv68oqPDu7MZZwmHhRxt/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/fWV00yP8/20250529-123315.png" group-title="Sports",Ten Cricket
@@ -578,9 +590,11 @@ https://techandeat.online/sliv/stream.m3u8?id=1000009278
 #EXTVLCOPT:http-referrer=https://techandeat.online
 https://techandeat.online/sliv/stream.m3u8?id=1000009275
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/855N9Fv9/20250529-125601.png" group-title="Sports",BeiN Sports 1
-http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/33.m3u8
+http://27.124.71.27/beIN_Sports_1/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/RFD4BMQF/20250529-125806.png" group-title="Sports",BeiN Sports 2
-http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/31.m3u8
+http://27.124.71.27/beIN_Sports_2/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/yNn7LhD0/20250529-125913.png" group-title="Sports",BeiN Sports 3
+http://27.124.71.27/beIN_Sports_3/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/xCPxcQ0K/Jamuna-tv.jpg" group-title="Bangla",JAMUNA TV
 http://live.ftpbdlive.com:8080/live/FTPBD-LIVETV/FTPBD-2026/37.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/bYCgM3dF/Somoy-TV.jpg" group-title="Bangla",SOMOY TV HD
